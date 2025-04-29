@@ -1,7 +1,21 @@
 'use client';
+import BrandsCarousel from '@/components/BrandsCarousel';
 import Waves from '@/components/Waves';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
 import Image from 'next/image';
+const brands = [
+	{ id: 'brand1', src: '/slatranslogistica-logo.png', alt: 'Brand 1' },
+	{ id: 'brand2', src: '/slatranslogistica-logo.png', alt: 'Brand 2' },
+	{ id: 'brand3', src: '/slatranslogistica-logo.png', alt: 'Brand 3' },
+	{ id: 'brand4', src: '/slatranslogistica-logo.png', alt: 'Brand 4' },
+	{ id: 'brand5', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand6', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand7', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand8', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand9', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand10', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+	{ id: 'brand11', src: '/slatranslogistica-logo.png', alt: 'Brand 5' },
+];
 
 export default function Home() {
 	return (
@@ -23,6 +37,10 @@ export default function Home() {
 				</p>
 			</div>
 			<Waves />
+			<h1 className="text-4xl text-center font-bold text-sky-400">
+				NUESTROS ALIADOS
+			</h1>
+			<BrandsCarousel brands={brands} />
 			<WhatsAppWidget />
 		</>
 	);
