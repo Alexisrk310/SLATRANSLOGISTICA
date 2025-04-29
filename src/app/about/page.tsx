@@ -16,7 +16,7 @@ const page = () => {
 				</p>
 			</div>
 			<section className="w-full max-w-5xl mx-auto py-16 px-4">
-				<div className="grid md:grid-cols-1 gap-8 justify-center">
+				<div className="grid md:grid-cols-2 gap-8 justify-center">
 					<div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-sky-400">
 						<h2 className="text-2xl font-bold text-sky-500 mb-4">Misión</h2>
 						<p className="text-gray-700 leading-relaxed">

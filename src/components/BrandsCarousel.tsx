@@ -43,7 +43,7 @@ const BrandsCarousel: React.FC<BrandsCarouselProps> = ({ brands }) => {
 				ref={carouselRef}
 				className="flex gap-8 px-6 overflow-hidden whitespace-nowrap">
 				{/* Original + Cloned for seamless looping */}
-				{[...brands, ...brands].map((brand, index) => (
+				{[...brands, ...brands, ...brands].map((brand, index) => (
 					<img
 						key={brand.id + '-' + index}
 						src={brand.src}

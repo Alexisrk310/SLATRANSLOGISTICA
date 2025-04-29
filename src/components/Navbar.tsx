@@ -9,10 +9,10 @@ const Navbar = () => {
 					{/* Logo */}
 					<div className="flex items-center">
 						<Image
-							src="/slatranslogistica-logo.png" // Cambia esto por tu ruta local o remota
+							src="/logo-dark.png" // Cambia esto por tu ruta local o remota
 							alt="Logo"
-							width={300}
-							height={300}
+							width={180}
+							height={180}
 							className="mr-2 rounded-full"
 						/>
 					</div>
