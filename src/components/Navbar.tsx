@@ -19,19 +19,17 @@ const Navbar = () => {
 
 					{/* Links */}
 					<div className="hidden md:flex space-x-6">
-						<Link href="#inicio" className="hover:text-white/80 transition">
+						<Link href="/" className="hover:text-white/80 transition">
 							Inicio
 						</Link>
-						<Link
-							href="#caracteristicas"
-							className="hover:text-white/80 transition">
+						<Link href="/services" className="hover:text-white/80 transition">
 							Servicios
 						</Link>
-						<Link href="#precios" className="hover:text-white/80 transition">
-							Acerca de mi
+						<Link href="/about" className="hover:text-white/80 transition">
+							Conocenos
 						</Link>
-						<Link href="#contacto" className="hover:text-white/80 transition">
-							Contacto
+						<Link href="/contactUs" className="hover:text-white/80 transition">
+							Contactanos
 						</Link>
 					</div>
 
@@ -44,7 +42,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 				</div>
-			</div>  
+			</div>
 		</nav>
 	);
 };

@@ -57,7 +57,7 @@ export default function Footer() {
 
 			{/* Derechos de autor */}
 			<div className="mt-10 text-center text-xs text-gray-400 border-t border-gray-600 pt-4">
-				© {year ?? ''} TransLogística. Todos los derechos reservados.
+				© {year ?? ''} TRANSLOGISTICA SLA. Todos los derechos reservados.
 			</div>
 		</footer>
 	);

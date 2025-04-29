@@ -10,7 +10,7 @@ const FloatingWhatsApp = dynamic(
 export default function WhatsAppWidget() {
 	const props: FloatingWhatsAppProps = {
 		accountName: 'SLA TRANSLOGISTICA SAS',
-		phoneNumber: '3012266530',
+		phoneNumber: '3245837514',
 		chatMessage: 'Hola, ¿en qué puedo ayudarte?',
 		statusMessage: 'En línea',
 		avatar: '/slatranslogistica.png',
