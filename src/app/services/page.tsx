@@ -1,6 +1,13 @@
 'use client';
 import React from 'react';
-import { FaTruckMoving, FaBoxes, FaClock, FaWhatsapp } from 'react-icons/fa';
+import {
+	FaTruckMoving,
+	FaBoxes,
+	FaWarehouse,
+	FaDolly,
+	FaProjectDiagram,
+	FaMapMarkedAlt,
+} from 'react-icons/fa';
 
 const page = () => {
 	return (
@@ -10,55 +17,30 @@ const page = () => {
 					Nuestros Servicios
 				</h1>
 				<p className="text-lg mb-12">
-					En TRANSLOGISTICA SLA ofrecemos una variedad de soluciones de
-					transporte diseñadas para adaptarse a tus necesidades.
+					En TRANSLOGISTICA SLA ofrecemos soluciones integrales de transporte,
+					almacenamiento y logística.
 				</p>
 
-				<div className="grid md:grid-cols-3 gap-8">
+				<div className="grid md:grid-cols-3 items-center gap-8">
 					<ServiceCard
 						icon={<FaTruckMoving size={40} className="text-sky-400" />}
 						title="Transporte de Carga"
-						description="Movilizamos mercancía de manera eficiente, segura y puntual a nivel nacional."
+						description="Transporte en contenedores y carga suelta. Actualmente cubrimos rutas locales y regionales."
 					/>
 					<ServiceCard
-						icon={<FaBoxes size={40} className="text-sky-400" />}
-						title="Logística y Distribución"
-						description="Ofrecemos soluciones completas de almacenamiento y distribución puerta a puerta."
+						icon={<FaWarehouse size={40} className="text-sky-400" />}
+						title="Almacenamiento"
+						description="Servicio de almacenamiento en bodegas para todo tipo de mercancías."
 					/>
 					<ServiceCard
-						icon={<FaClock size={40} className="text-sky-400" />}
-						title="Entregas Rápidas"
-						description="Servicio express para entregas urgentes, cumpliendo con los tiempos más exigentes."
+						icon={<FaDolly size={40} className="text-sky-400" />}
+						title="Cargue y Descargue"
+						description="Cargue y descargue de mercancías con máquinas especializadas."
 					/>
 					<ServiceCard
-						icon={<FaTruckMoving size={40} className="text-sky-400" />}
-						title="Transporte de Carga"
-						description="Movilizamos mercancía de manera eficiente, segura y puntual a nivel nacional."
-					/>
-					<ServiceCard
-						icon={<FaBoxes size={40} className="text-sky-400" />}
-						title="Logística y Distribución"
-						description="Ofrecemos soluciones completas de almacenamiento y distribución puerta a puerta."
-					/>
-					<ServiceCard
-						icon={<FaClock size={40} className="text-sky-400" />}
-						title="Entregas Rápidas"
-						description="Servicio express para entregas urgentes, cumpliendo con los tiempos más exigentes."
-					/>
-					<ServiceCard
-						icon={<FaTruckMoving size={40} className="text-sky-400" />}
-						title="Transporte de Carga"
-						description="Movilizamos mercancía de manera eficiente, segura y puntual a nivel nacional."
-					/>
-					<ServiceCard
-						icon={<FaBoxes size={40} className="text-sky-400" />}
-						title="Logística y Distribución"
-						description="Ofrecemos soluciones completas de almacenamiento y distribución puerta a puerta."
-					/>
-					<ServiceCard
-						icon={<FaClock size={40} className="text-sky-400" />}
-						title="Entregas Rápidas"
-						description="Servicio express para entregas urgentes, cumpliendo con los tiempos más exigentes."
+						icon={<FaProjectDiagram size={40} className="text-sky-400" />}
+						title="Logística"
+						description="Acompañamiento logístico, consolidación, desconsolidación, empaque, y vaciado de contenedores."
 					/>
 				</div>
 			</div>

@@ -24,7 +24,6 @@ const BrandsCarousel: React.FC<BrandsCarouselProps> = ({ brands }) => {
 
 		const scroll = () => {
 			if (el.scrollLeft >= el.scrollWidth / 2) {
-				// Rewind without visual jump
 				el.scrollLeft = 0;
 			} else {
 				el.scrollLeft += scrollAmount;
@@ -38,11 +37,10 @@ const BrandsCarousel: React.FC<BrandsCarouselProps> = ({ brands }) => {
 	}, []);
 
 	return (
-		<div className="w-full overflow-hidden bg-white py-8">
+		<div className="w-full overflow-hidden bg-white pt-8">
 			<div
 				ref={carouselRef}
 				className="flex gap-8 px-6 overflow-hidden whitespace-nowrap">
-				{/* Original + Cloned for seamless looping */}
 				{[...brands, ...brands, ...brands].map((brand, index) => (
 					<img
 						key={brand.id + '-' + index}

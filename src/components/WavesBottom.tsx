@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Waves = () => {
+const WavesBottom = () => {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 			<path
@@ -11,4 +11,4 @@ const Waves = () => {
 	);
 };
 
-export default Waves;
+export default WavesBottom;

@@ -33,7 +33,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 
-					{/* Botón CTA */}
+					{/* Button begin */}
 					<div className="hidden md:block">
 						<Link
 							href="#registro"
