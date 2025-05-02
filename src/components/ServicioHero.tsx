@@ -1,5 +1,4 @@
-import { ServicioHeroProps } from "@/interfaces/services.Interfaces";
-
+import { ServicioHeroProps } from '@/interfaces/services.Interfaces';
 
 const ServicioHero: React.FC<ServicioHeroProps> = ({
 	title,

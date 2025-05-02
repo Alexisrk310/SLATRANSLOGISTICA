@@ -1,6 +1,7 @@
 'use client';
 import ServiceCard from '@/components/ServiceCard';
 import ServicioHero from '@/components/ServicioHero';
+
 import React from 'react';
 import {
 	FaTruckMoving,
@@ -78,7 +79,7 @@ const services = () => {
 			<ServicioHero
 				title="Almacenamiento"
 				description="Bodegas seguras para almacenar tus productos con control y gestión eficiente."
-				className="mt-16"
+				className="mt-0"
 				icon={<FaWarehouse size={32} className="text-sky-500" />}
 				imageUrl="/servicios/bodegas.png"
 				features={[
@@ -90,7 +91,7 @@ const services = () => {
 			<ServicioHero
 				title="Cargue y Descargue"
 				description="Maniobras seguras con equipos especializados para tus operaciones logísticas."
-				className="mt-16"
+				className=""
 				icon={<FaDolly size={32} className="text-sky-500" />}
 				imageUrl="/servicios/cargue-y-descargue.png"
 				features={[
@@ -103,7 +104,7 @@ const services = () => {
 			<ServicioHero
 				title="Logística Integral"
 				description="Acompañamos todo tu proceso de logística desde el empaque hasta la desconsolidación."
-				className="mt-16"
+				className=""
 				icon={<FaProjectDiagram size={32} className="text-sky-500" />}
 				imageUrl="/servicios/logistica.png"
 				features={[
