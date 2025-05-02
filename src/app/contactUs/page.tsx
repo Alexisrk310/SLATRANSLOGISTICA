@@ -1,15 +1,15 @@
 'use client';
 import WaveLine from '@/components/WaveLine';
-import Image from 'next/image';
+
 import React from 'react';
-import { BsTruck } from 'react-icons/bs';
-import { FaWhatsapp } from 'react-icons/fa';
+
+import { FaTruckMoving } from 'react-icons/fa';
 
 const page = () => {
 	return (
 		<div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
 			<div className="w-full flex flex-col md:flex-row items-center justify-center gap-10 bg-[#38bdf8] text-white p-10">
-				<BsTruck size={350} />
+				<FaTruckMoving size={350} />
 				<div className="flex flex-col items-center text-center max-w-xl space-y-4">
 					<p className="text-2xl">
 						Puedes ponerte en contacto con nosotros a través de WhatsApp o

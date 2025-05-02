@@ -13,11 +13,11 @@ export default function WhatsAppWidget() {
 		phoneNumber: '+573245837514',
 		chatMessage: 'Hola, ¿en qué puedo ayudarte?',
 		statusMessage: 'En línea',
-		avatar: '/slatranslogistica.png',
+		avatar: 'logos/slatranslogistica.png',
 		notificationDelay: 1000,
 		notification: true,
 		notificationSound: true,
-		allowClickAway: true,
+		// allowClickAway: true,
 		allowEsc: true,
 	};
 

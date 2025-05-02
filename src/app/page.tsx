@@ -5,7 +5,7 @@ import WavesBottom from '@/components/WavesBottom';
 import Waves from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
-import { alliedBrandData } from '@/data/AlliedBrandData';
+import { alliedBrandData } from '@/data/alliedBrandData';
 import Image from 'next/image';
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 		<>
 			<div className="w-full flex flex-col-reverse lg:flex-row items-center justify-around bg-[#38bdf8] text-white px-6 py-10 gap-6">
 				<Image
-					src={'/tractocamion-container-en-via.png'}
+					src={'/tractocamion/tractocamion-container-en-via.png'}
 					alt="Logo"
 					width={700}
 					height={700}

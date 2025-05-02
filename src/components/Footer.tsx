@@ -14,7 +14,7 @@ export default function Footer() {
 			<div className="flex flex-col md:flex-row justify-between gap-10 flex-wrap">
 				<div className="flex flex-col gap-2 max-w-xs">
 					<Image
-						src={'/slatranslogistica-logo.png'}
+						src={'/logos/logo-dark.png'}
 						alt="Logo"
 						width={350}
 						height={350}
