@@ -1,45 +1,52 @@
+'use client';
 import React from 'react';
 
-const page = () => {
+const about = () => {
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-			<div className="bg-sky-400 w-full max-w-3xl rounded-2xl shadow-2xl p-8 text-white text-center">
-				<h1 className="text-4xl font-bold mb-4">SOMOS TRANSLOGISTICA SLA</h1>
-				<p className="text-lg leading-relaxed">
+		<div className="min-h-screen flex flex-col items-center">
+			{/* Hero */}
+			<section className="w-full bg-sky-400 text-white py-20 px-6 text-center">
+				<h1 className="text-5xl font-bold mb-6">SOMOS TRANSLOGÍSTICA SLA</h1>
+				<p className="text-lg max-w-4xl mx-auto leading-relaxed">
 					Somos una empresa dedicada al transporte terrestre y la logística,
 					enfocada en brindar soluciones eficientes, seguras y adaptadas a las
 					necesidades de cada cliente. Ofrecemos un servicio de calidad
 					respaldado por tecnología avanzada y un equipo profesional altamente
-					capacitado, lo que nos permite garantizar entregas puntuales,
-					confiables y en óptimas condiciones, junto con servicios
-					complementarios que optimizan tiempo y costos.
+					capacitado, garantizando entregas puntuales, confiables y en óptimas
+					condiciones.
 				</p>
-			</div>
-			<section className="w-full max-w-5xl mx-auto py-16 px-4">
-				<div className="grid md:grid-cols-2 gap-8 justify-center">
-					<div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-sky-400">
-						<h2 className="text-2xl font-bold text-sky-500 mb-4">Misión</h2>
+			</section>
+
+			{/* Misión, visión, objetivo */}
+			<section className="w-full max-w-6xl px-6 py-16">
+				<div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+					<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left">
+						<h2 className="text-2xl font-bold text-sky-600 mb-4">Misión</h2>
 						<p className="text-gray-700 leading-relaxed">
 							Somos una empresa de Logística y transporte de carga terrestre en
 							donde ofrecemos un servicio de calidad dando a nuestros clientes
 							soluciones puntuales a sus necesidades, generándoles mayores
 							beneficios, confianza, teniendo disponibles una gama de servicios
-							complementarios al transporte para mayor comodidad y economía
+							complementarios al transporte para mayor comodidad y economía.
 						</p>
 					</div>
 
-					<div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-sky-400">
-						<h2 className="text-2xl font-bold text-sky-500 mb-4">Visión</h2>
+					<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left">
+						<h2 className="text-2xl font-bold text-sky-600 mb-4">Visión</h2>
 						<p className="text-gray-700 leading-relaxed">
 							Mantenemos en el mercado siendo una empresa confiable para
 							nuestros clientes y atractiva para otros, basándonos en la mejora
 							continua y utilizando una tecnología de punta, que satisfaga las
 							necesidades de nuestros clientes, para que se fidelicen y tomen
-							cada uno de los servicios ofrecidos por nuestra compañía
+							cada uno de los servicios ofrecidos por nuestra compañía.
 						</p>
 					</div>
-					<div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-sky-400">
-						<h2 className="text-2xl font-bold text-sky-500 mb-4">
+				</div>
+
+				{/* Objetivo estratégico ocupa toda la fila */}
+				<div className="mt-8">
+					<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left w-full">
+						<h2 className="text-2xl font-bold text-sky-600 mb-4">
 							Objetivo Estratégico
 						</h2>
 						<p className="text-gray-700 leading-relaxed">
@@ -48,13 +55,26 @@ const page = () => {
 							que contamos con personal experimentado, capacitado y responsable
 							a cargo de la empresa, por lo que podrá estar seguro los servicios
 							serán acorde a sus expectativas y que sus entregas estarán en
-							tiempo y forma pactados, en las mejores condiciones
+							tiempo y forma pactados, en las mejores condiciones.
 						</p>
 					</div>
 				</div>
+			</section>
+
+			{/* Sección adicional */}
+			<section className="w-full bg-white py-16 px-6 text-center ">
+				<h2 className="text-4xl font-bold text-sky-600 mb-6">
+					Nuestros Valores
+				</h2>
+				<p className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
+					Nos guiamos por principios sólidos como la responsabilidad, la
+					transparencia y el compromiso con nuestros clientes. Cada entrega es
+					una promesa cumplida, y trabajamos cada día para fortalecer la
+					confianza que nuestros aliados comerciales depositan en nosotros.
+				</p>
 			</section>
 		</div>
 	);
 };
 
-export default page;
+export default about;

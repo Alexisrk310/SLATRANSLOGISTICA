@@ -6,7 +6,7 @@
 		--foreground: #ededed;
 	}
 }
-
+/* ANIMATION HORIZONTAL */
 @keyframes gradient-move {
 	0% {
 		background-position: 0% 50%;
@@ -46,5 +46,47 @@
 	animation: gradient-move 3s linear infinite;
 	border-top-left-radius: 0.75rem;
 	border-top-right-radius: 0.75rem;
+	z-index: 10;
+}
+
+/* ANIMATION VERTICAL */
+@keyframes gradient-move-vertical {
+	0% {
+		background-position: 50% 0%;
+	}
+	100% {
+		background-position: 50% 100%;
+	}
+}
+
+.animated-border-left {
+	position: relative;
+	overflow: hidden;
+}
+
+.animated-border-left::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 100%;
+	background: linear-gradient(
+		180deg,
+		#e0f2fe,
+		#0ea5e9,
+		#06b6d4,
+		#3b82f6,
+		#6366f1,
+		#3b82f6,
+		#06b6d4,
+		#e0f2fe,
+		#0ea5e9,
+		#06b6d4
+	);
+	background-size: 400% 400%;
+	animation: gradient-move-vertical 4s linear infinite;
+	border-top-left-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
 	z-index: 10;
 }
