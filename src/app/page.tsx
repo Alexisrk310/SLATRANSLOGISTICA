@@ -22,10 +22,10 @@ export default function Home() {
 						/>
 						<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed lg:w-1/2">
 							Nuestra empresa se especializa en ofrecer soluciones integrales de
-							transporte para personas y mercancías, garantizando puntualidad,
-							seguridad y eficiencia en cada servicio. Contamos con una flota
-							moderna y personal capacitado que asegura el cumplimiento de los
-							más altos estándares de calidad.
+							transporte de carga terrestre garantizando puntualidad, seguridad
+							y eficiencia en cada servicio. Contamos con una flota moderna y
+							personal capacitado que asegura el cumplimiento de los más altos
+							estándares de calidad.
 						</p>
 					</div>
 				</section>

@@ -1,13 +1,25 @@
 'use client';
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
-import WaveLine from '@/components/WaveLine';
 import FallingSection from '@/components/FallingSection';
 
 const ContactPage = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm<FormData>();
+
+	const onSubmit = (data: FormData) => {
+		const message = `Nombre: ${data.name}\n\nCorreo: ${data.email}\n\nTeléfono: ${data.tel}\n\nMensaje: ${data.description}`;
+		console.log(message);
+		reset();
+	};
+
 	return (
 		<div className="min-h-screen bg-gray-50 flex flex-col">
-			{/* Hero */}
 			<section className="bg-sky-400 text-white py-20 px-6 flex flex-col items-center text-center">
 				<FallingSection>
 					<h1 className="text-5xl font-bold mb-4">Contáctanos</h1>
@@ -36,24 +48,34 @@ const ContactPage = () => {
 				</div>
 			</section>
 
-			{/* <WaveLine /> */}
-
-			{/* Formulario */}
 			<section className="py-16 px-6 bg-white text-center">
 				<FallingSection>
 					<h2 className="text-4xl font-bold text-sky-600 mb-10">
 						Formulario de Contacto
 					</h2>
 				</FallingSection>
-				<form className="max-w-3xl mx-auto space-y-6 text-left">
+				<form
+					onSubmit={handleSubmit(onSubmit)}
+					className="max-w-3xl mx-auto space-y-6 text-left">
 					<div className="flex flex-col">
 						<label className="mb-2 font-medium text-sky-700">Nombre</label>
 						<input
 							type="text"
 							placeholder="Tu nombre"
 							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"
+							{...register('name', {
+								required: 'El nombre es obligatorio.',
+								pattern: {
+									value: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/,
+									message: 'Solo se permiten letras y espacios.',
+								},
+							})}
 						/>
+						{errors.name && (
+							<p className="text-red-500 text-sm">{errors.name.message}</p>
+						)}
 					</div>
+
 					<div className="flex flex-col">
 						<label className="mb-2 font-medium text-sky-700">
 							Correo electrónico
@@ -62,15 +84,55 @@ const ContactPage = () => {
 							type="email"
 							placeholder="tucorreo@ejemplo.com"
 							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"
+							{...register('email', {
+								required: 'El correo es obligatorio.',
+								pattern: {
+									value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+									message: 'Correo electrónico inválido.',
+								},
+							})}
 						/>
+						{errors.email && (
+							<p className="text-red-500 text-sm">{errors.email.message}</p>
+						)}
 					</div>
+
+					<div className="flex flex-col">
+						<label className="mb-2 font-medium text-sky-700">Teléfono</label>
+						<input
+							type="tel"
+							placeholder="3001234567"
+							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"
+							{...register('tel', {
+								required: 'El teléfono es obligatorio.',
+								pattern: {
+									value: /^\d{10}$/,
+									message: 'Debe contener exactamente 10 dígitos numéricos.',
+								},
+							})}
+						/>
+						{errors.tel && (
+							<p className="text-red-500 text-sm">{errors.tel.message}</p>
+						)}
+					</div>
+
 					<div className="flex flex-col">
 						<label className="mb-2 font-medium text-sky-700">Mensaje</label>
 						<textarea
 							rows={5}
 							placeholder="Escribe tu mensaje aquí..."
-							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"></textarea>
+							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"
+							{...register('description', {
+								required: 'El mensaje es obligatorio.',
+							})}
+						/>
+						{errors.description && (
+							<p className="text-red-500 text-sm">
+								{errors.description.message}
+							</p>
+						)}
 					</div>
+
 					<button
 						type="submit"
 						className="w-full md:w-auto bg-sky-600 text-white px-6 py-3 rounded-full hover:bg-sky-700 transition font-semibold">
@@ -79,7 +141,6 @@ const ContactPage = () => {
 				</form>
 			</section>
 
-			{/* Mapa */}
 			<section className="py-16 px-6 bg-gray-100" id="ubicacion">
 				<FallingSection>
 					<h2 className="text-4xl font-bold text-center text-sky-600 mb-10">
@@ -92,7 +153,7 @@ const ContactPage = () => {
 						width="100%"
 						height="450"
 						style={{ border: 0 }}
-						allowFullScreen={true}
+						allowFullScreen
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"></iframe>
 				</div>
