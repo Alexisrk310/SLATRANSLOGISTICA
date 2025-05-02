@@ -121,19 +121,6 @@ const services = () => {
 					'Optimización de procesos logísticos',
 				]}
 			/>
-			{/* <ServicioHero
-				title="Próximamente"
-				description="Estamos trabajando para traerte más soluciones a tus necesidades logísticas."
-				className="mt-16"
-				icon={<FaLock size={32} className="text-gray-500" />}
-				imageUrl="/img/proximamente.jpg"
-				features={[
-					'Nuevas rutas',
-					'Servicios especializados',
-					'Mejora continua',
-				]}
-				reversed
-			/> */}
 		</div>
 	);
 };
