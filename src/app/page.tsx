@@ -4,7 +4,6 @@ import BrandsCarousel from '@/components/BrandsCarousel';
 import WavesBottom from '@/components/WavesBottom';
 import Waves from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
-import WhatsAppWidget from '@/components/WhatsAppWidget';
 import { alliedBrandData } from '@/data/alliedBrandData';
 import Image from 'next/image';
 
@@ -14,7 +13,7 @@ export default function Home() {
 			<section className="w-full bg-gradient-to-b from-sky-400 to-sky-500 text-white px-6 py-16">
 				<div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
 					<Image
-						src="/tractocamion/tractocamion-container-en-via.png"
+						src="/tractocamion/planificacion-de-logistica.png"
 						alt="Tractocamión"
 						width={700}
 						height={700}
@@ -54,7 +53,7 @@ export default function Home() {
 						condiciones y a tiempo.
 					</p>
 					<Image
-						src="/tractocamion/tractocamion-container-en-via.png"
+						src="/tractocamion/cargue.png"
 						alt="Tractocamión 2"
 						width={700}
 						height={700}
@@ -66,7 +65,7 @@ export default function Home() {
 			<WavesBottom />
 
 			<section className="py-12 px-4 text-center">
-				<h2 className="text-4xl font-extrabold text-sky-500 mb-8 drop-shadow-md">
+				<h2 className="text-4xl font-extrabold text-sky-500 mb-16 drop-shadow-md">
 					NUESTROS COLABORADORES
 				</h2>
 				<div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
