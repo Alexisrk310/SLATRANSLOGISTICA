@@ -8,7 +8,7 @@ import {
 	FaLock,
 } from 'react-icons/fa';
 
-const page = () => {
+const services = () => {
 	return (
 		<div className="min-h-screen bg-white text-gray-800 p-6 pt-16 relative">
 			<div className="max-w-5xl mx-auto text-center">
@@ -208,4 +208,4 @@ const ServiceCard = ({
 	</div>
 );
 
-export default page;
+export default services;
