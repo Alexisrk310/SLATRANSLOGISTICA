@@ -54,7 +54,7 @@ export default function Home() {
 						condiciones y a tiempo.
 					</p>
 					<Image
-						src="/tractocamion-container-en-via.png"
+						src="/tractocamion/tractocamion-container-en-via.png"
 						alt="Tractocamión 2"
 						width={700}
 						height={700}
@@ -97,7 +97,7 @@ export default function Home() {
 				</p>
 			</section>
 
-			<WhatsAppWidget />
+			
 		</>
 	);
 }
