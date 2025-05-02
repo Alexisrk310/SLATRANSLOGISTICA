@@ -8,9 +8,11 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 	imageUrl,
 	features,
 	reversed = false,
+	ref = null,
 }) => {
 	return (
 		<section
+			ref={ref}
 			className={`${className} w-full bg-sky-50 text-gray-800 py-16 px-6`}>
 			<div
 				className={`max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 ${
@@ -37,9 +39,13 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 							<li key={idx}>{feature}</li>
 						))}
 					</ul>
-					<button className="mt-8 px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 cursor-pointer">
+					<a
+						href="https://api.whatsapp.com/send/?phone=+573245837514&text=¿Hola como estás?, me gustaría prestar tus servicios"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-block mt-8 px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 cursor-pointer">
 						Prestar servicios
-					</button>
+					</a>
 				</div>
 			</div>
 		</section>

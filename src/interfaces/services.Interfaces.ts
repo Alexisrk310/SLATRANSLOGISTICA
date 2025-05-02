@@ -13,4 +13,5 @@ export interface ServicioHeroProps {
 	imageUrl: string;
 	features: string[];
 	reversed?: boolean;
+	ref?: React.Ref<HTMLDivElement> | null;
 }

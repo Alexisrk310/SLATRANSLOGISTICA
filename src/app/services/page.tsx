@@ -2,7 +2,7 @@
 import ServiceCard from '@/components/ServiceCard';
 import ServicioHero from '@/components/ServicioHero';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import {
 	FaTruckMoving,
 	FaWarehouse,
@@ -12,6 +12,11 @@ import {
 } from 'react-icons/fa';
 
 const services = () => {
+	const seccionRef = useRef<HTMLDivElement>(null);
+
+	const handleScroll = () => {
+		seccionRef.current?.scrollIntoView({ behavior: 'smooth' });
+	};
 	return (
 		<div className="min-h-screen bg-white text-gray-800 p-6 pt-16 relative">
 			<div className="max-w-5xl mx-auto text-center">
@@ -58,15 +63,18 @@ const services = () => {
 						description=""
 					/>
 				</div>
-				<button className="mt-8 px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 cursor-pointer">
+				<button
+					onClick={handleScroll}
+					className="mt-8 px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 cursor-pointer">
 					Ver mas detalladamente nuestros servicios
 				</button>
 			</div>
 
 			<ServicioHero
+				ref={seccionRef}
 				title="Transporte de Carga"
 				description="Soluciones eficientes para movilizar tus mercancías."
-				className="mt-16"
+				className="mt-16 services-hero"
 				icon={<FaTruckMoving size={32} className="text-sky-500" />}
 				imageUrl="/servicios/transporte-de-carga.png"
 				features={[
