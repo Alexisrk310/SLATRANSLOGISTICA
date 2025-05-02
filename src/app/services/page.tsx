@@ -12,7 +12,7 @@ const services = () => {
 	return (
 		<div className="min-h-screen bg-white text-gray-800 p-6 pt-16 relative">
 			<div className="max-w-5xl mx-auto text-center">
-				<h1 className="text-4xl font-bold text-sky-500 mb-8">
+				<h1 className="text-4xl font-extrabold text-sky-500 drop-shadow-md mb-8">
 					Nuestros Servicios
 				</h1>
 				<p className="text-lg mb-12">
@@ -166,7 +166,9 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 				{/* Contenido */}
 				<div className="w-full md:w-1/2 px-4">
 					<div className="mb-4">{icon}</div>
-					<h2 className="text-3xl font-bold text-sky-500 mb-4">{title}</h2>
+					<h2 className="text-4xl font-extrabold text-sky-500 drop-shadow-md mb-4">
+						{title}
+					</h2>
 					<p className="text-gray-600 mb-4">{description}</p>
 					<ul className="list-disc pl-5 text-gray-700 space-y-2">
 						{features.map((feature, idx) => (
