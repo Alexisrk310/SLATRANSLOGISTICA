@@ -48,7 +48,7 @@ export default function Home() {
 					sus cargas lleguen a su destino en perfectas condiciones y a tiempo.
 				</p>
 				<Image
-					src={'/tractocamion-container.png'}
+					src={'/tractocamion-container-en-via.png'}
 					alt="Logo"
 					width={700}
 					height={700}
