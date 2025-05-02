@@ -21,6 +21,7 @@ const Navbar = () => {
 							width={180}
 							height={180}
 							className="mr-2 rounded-full"
+							priority
 						/>
 					</div>
 

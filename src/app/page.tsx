@@ -3,9 +3,8 @@ import AvatarCard from '@/components/AvatarCard';
 import BrandsCarousel from '@/components/BrandsCarousel';
 import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
-import Waves from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
-import { alliedBrandData } from '@/data/alliedBrandData';
+import { alliedBrandData } from '@/data/brands/alliedBrand.data';
 import Image from 'next/image';
 
 export default function Home() {
@@ -81,7 +80,7 @@ export default function Home() {
 							imageSrc="/brands/flexindustrial.jpeg"
 						/>
 						<AvatarCard
-							name="Ana Mercedes Reales Valencia"
+							name="Ana Mercedes Reales Palencia"
 							role="Coordinadora de operaciones"
 							description="Organiza la logística de transporte y coordina los recursos necesarios."
 							imageSrc="/brands/flexindustrial.jpeg"

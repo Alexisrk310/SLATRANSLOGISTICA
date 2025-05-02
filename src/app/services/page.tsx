@@ -2,6 +2,7 @@
 import FallingSection from '@/components/FallingSection';
 import ServiceCard from '@/components/ServiceCard';
 import ServicioHero from '@/components/ServicioHero';
+import { transporteFeatures } from '@/data/services/storage.data';
 
 import React, { useRef } from 'react';
 import {
@@ -11,6 +12,8 @@ import {
 	FaProjectDiagram,
 	FaLock,
 } from 'react-icons/fa';
+
+
 
 const services = () => {
 	const seccionRef = useRef<HTMLDivElement>(null);
@@ -83,11 +86,7 @@ const services = () => {
 					className="mt-16 services-hero"
 					icon={<FaTruckMoving size={32} className="text-sky-500" />}
 					imageUrl="/servicios/transporte-de-carga.png"
-					features={[
-						'Cobertura regional y nacional',
-						'Cargas completas y consolidadas',
-						'Seguimiento en tiempo real',
-					]}
+					features={transporteFeatures}
 					reversed={true}
 				/>
 			</FallingSection>
@@ -98,11 +97,7 @@ const services = () => {
 					className="mt-0"
 					icon={<FaWarehouse size={32} className="text-sky-500" />}
 					imageUrl="/servicios/bodegas.png"
-					features={[
-						'Bodegas con vigilancia 24/7',
-						'Control de inventario',
-						'Espacios adaptables a tus necesidades',
-					]}
+					features={transporteFeatures}
 				/>
 			</FallingSection>
 			<FallingSection>
@@ -112,11 +107,7 @@ const services = () => {
 					className=""
 					icon={<FaDolly size={32} className="text-sky-500" />}
 					imageUrl="/servicios/cargue-y-descargue.png"
-					features={[
-						'Personal calificado',
-						'Uso de maquinaria especializada',
-						'Procesos rápidos y seguros',
-					]}
+					features={transporteFeatures}
 					reversed={true}
 				/>
 			</FallingSection>
@@ -127,11 +118,7 @@ const services = () => {
 					className=""
 					icon={<FaProjectDiagram size={32} className="text-sky-500" />}
 					imageUrl="/servicios/logistica.png"
-					features={[
-						'Empaque y embalaje',
-						'Consolidación y desconsolidación',
-						'Optimización de procesos logísticos',
-					]}
+					features={transporteFeatures}
 				/>
 			</FallingSection>
 		</div>

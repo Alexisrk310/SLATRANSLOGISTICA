@@ -5,13 +5,19 @@ export interface ServiceCardProps {
 	disabled?: boolean;
 }
 
+// interfaces/services.Interfaces.ts
+export interface FeatureGroup {
+	title: string;
+	items: string[];
+}
+
 export interface ServicioHeroProps {
 	title: string;
 	description: string;
 	className?: string;
 	icon: React.ReactNode;
 	imageUrl: string;
-	features: string[];
+	features: FeatureGroup[];
 	reversed?: boolean;
-	ref?: React.Ref<HTMLDivElement> | null;
+	ref?: React.Ref<HTMLDivElement>;
 }

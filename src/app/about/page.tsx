@@ -8,7 +8,9 @@ const about = () => {
 			{/* Hero */}
 			<section className="w-full bg-sky-400 text-white py-20 px-6 text-center">
 				<FallingSection>
-					<h1 className="text-5xl font-bold mb-6">SOMOS TRANSLOGÍSTICA SLA</h1>
+					<h1 className="md:text-5xl sm:text-4xl font-bold mb-6 text-center">
+						SOMOS TRANSLOGÍSTICA SLA
+					</h1>
 					<p className="text-lg max-w-4xl mx-auto leading-relaxed">
 						Somos una empresa dedicada al transporte terrestre y la logística,
 						enfocada en brindar soluciones eficientes, seguras y adaptadas a las
