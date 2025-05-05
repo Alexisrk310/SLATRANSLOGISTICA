@@ -13,8 +13,6 @@ import {
 	FaLock,
 } from 'react-icons/fa';
 
-
-
 const services = () => {
 	const seccionRef = useRef<HTMLDivElement>(null);
 
@@ -98,6 +96,7 @@ const services = () => {
 					icon={<FaWarehouse size={32} className="text-sky-500" />}
 					imageUrl="/servicios/bodegas.png"
 					features={transporteFeatures}
+					reversed={false}
 				/>
 			</FallingSection>
 			<FallingSection>
@@ -119,6 +118,7 @@ const services = () => {
 					icon={<FaProjectDiagram size={32} className="text-sky-500" />}
 					imageUrl="/servicios/logistica.png"
 					features={transporteFeatures}
+					reversed={false}
 				/>
 			</FallingSection>
 		</div>

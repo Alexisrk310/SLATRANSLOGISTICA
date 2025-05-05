@@ -15,9 +15,9 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 			ref={ref}
 			className={`${className} w-full bg-sky-50 text-gray-800 py-12 sm:py-16 px-4 sm:px-6`}>
 			<div
-				className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center ${
+				className={`max-w-6xl mx-auto flex flex-col md:flex-row ${
 					reversed ? 'md:flex-row-reverse' : ''
-				}`}>
+				} gap-10 items-center`}>
 				{/* Imagen */}
 				<div className="w-full">
 					<img

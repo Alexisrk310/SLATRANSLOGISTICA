@@ -17,19 +17,15 @@ export default function FallingSection({ children }: Props) {
 			([entry]) => {
 				if (entry.isIntersecting) {
 					el.classList.remove('fall');
-					// Forzar reinicio de animación
 					void el.offsetWidth;
 					el.classList.add('fall');
 				}
 			},
-			{ threshold: 0.1 }
+			{ threshold: 0.4 }
 		);
 
 		observer.observe(el);
-
-		return () => {
-			observer.disconnect();
-		};
+		return () => observer.disconnect();
 	}, []);
 
 	return (

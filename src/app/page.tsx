@@ -43,7 +43,7 @@ export default function Home() {
 
 			<FallingSection>
 				<WavesTop />
-				<section className="w-full bg-gradient-to-b from-sky-400 to-sky-500 text-white px-6 py-16">
+				<section className="w-full bg-[#0ea5e9] text-white px-6 py-16">
 					<div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
 						<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed lg:w-1/2">
 							Ofrecemos servicios de alta calidad en transporte de carga y

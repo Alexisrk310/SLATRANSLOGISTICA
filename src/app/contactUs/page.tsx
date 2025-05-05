@@ -101,7 +101,7 @@ const ContactPage = () => {
 						<label className="mb-2 font-medium text-sky-700">Teléfono</label>
 						<input
 							type="tel"
-							placeholder="3001234567"
+							placeholder="+57"
 							className="p-3 border border-gray-300 rounded-xl focus:outline-sky-400"
 							{...register('tel', {
 								required: 'El teléfono es obligatorio.',
