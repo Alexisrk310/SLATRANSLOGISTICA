@@ -17,9 +17,12 @@ import {
 } from 'react-icons/fa';
 
 const services = () => {
-	const seccionRef = useRef<HTMLDivElement>(null);
+	const freightForwardingRef = useRef<HTMLDivElement>(null);
+	const storageRef = useRef<HTMLDivElement>(null);
+	const loadingAndUnloadingRef = useRef<HTMLDivElement>(null);
+	const integralLogisticsRef = useRef<HTMLDivElement>(null);
 
-	const handleScroll = () => {
+	const handleScroll = (seccionRef: any) => {
 		seccionRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
 	return (
@@ -37,16 +40,19 @@ const services = () => {
 				<FallingSection>
 					<div className="grid md:grid-cols-3 items-center gap-8">
 						<ServiceCard
+							onClick={() => handleScroll(freightForwardingRef)}
 							icon={<FaTruckMoving size={40} className="text-sky-400" />}
 							title="Transporte de Carga"
 							description="Transporte en contenedores y carga suelta. Actualmente cubrimos rutas locales y regionales."
 						/>
 						<ServiceCard
+							onClick={() => handleScroll(storageRef)}
 							icon={<FaWarehouse size={40} className="text-sky-400" />}
 							title="Almacenamiento"
 							description="Servicio de almacenamiento en bodegas para todo tipo de mercancías."
 						/>
 						<ServiceCard
+							onClick={() => handleScroll(loadingAndUnloadingRef)}
 							icon={<FaDolly size={40} className="text-sky-400" />}
 							title="Cargue y Descargue"
 							description="Cargue y descargue de mercancías con máquinas especializadas."
@@ -58,6 +64,7 @@ const services = () => {
 							description=""
 						/>
 						<ServiceCard
+							onClick={() => handleScroll(integralLogisticsRef)}
 							icon={<FaProjectDiagram size={40} className="text-sky-400" />}
 							title="Logística"
 							description="Acompañamiento logístico, consolidación, desconsolidación, empaque, y vaciado de contenedores."
@@ -73,7 +80,7 @@ const services = () => {
 				</FallingSection>
 				<FallingSection>
 					<button
-						onClick={handleScroll}
+						onClick={() => handleScroll(freightForwardingRef)}
 						className="mt-8 px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 cursor-pointer">
 						Ver mas detalladamente nuestros servicios
 					</button>
@@ -81,9 +88,11 @@ const services = () => {
 			</div>
 			<FallingSection>
 				<ServicioHero
-					ref={seccionRef}
+					ref={freightForwardingRef}
 					title="Transporte de Carga"
-					description="Soluciones eficientes para movilizar tus mercancías."
+					description={`Soluciones eficientes para movilizar tus mercancías.
+						`}
+					subDescription={`URBANO`}
 					className="mt-16 services-hero"
 					icon={<FaTruckMoving size={32} className="text-sky-500" />}
 					imageUrl="/servicios/transporte-de-carga.png"
@@ -93,6 +102,7 @@ const services = () => {
 			</FallingSection>
 			<FallingSection>
 				<ServicioHero
+					ref={storageRef}
 					title="Almacenamiento"
 					description="Bodegas seguras para almacenar tus productos con control y gestión eficiente."
 					className="mt-0"
@@ -104,6 +114,7 @@ const services = () => {
 			</FallingSection>
 			<FallingSection>
 				<ServicioHero
+					ref={loadingAndUnloadingRef}
 					title="Cargue y Descargue"
 					description="Maniobras seguras con equipos especializados para tus operaciones logísticas."
 					className=""
@@ -115,6 +126,7 @@ const services = () => {
 			</FallingSection>
 			<FallingSection>
 				<ServicioHero
+					ref={integralLogisticsRef}
 					title="Logística Integral"
 					description="Acompañamos todo tu proceso de logística desde el empaque hasta la desconsolidación."
 					className=""

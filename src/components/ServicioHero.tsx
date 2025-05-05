@@ -1,8 +1,10 @@
 import { ServicioHeroProps } from '@/interfaces/services.Interfaces';
+import { TbHandFingerDown } from 'react-icons/tb';
 
 const ServicioHero: React.FC<ServicioHeroProps> = ({
 	title,
 	description,
+	subDescription,
 	className = '',
 	icon,
 	imageUrl,
@@ -35,6 +37,9 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 					</h2>
 					<p className="text-base sm:text-lg text-gray-600 mb-6 whitespace-pre-line">
 						{description}
+					</p>
+					<p className="flex text-base sm:text-lg text-sky-500 font-bold mb-6 whitespace-pre-line">
+						{subDescription} <TbHandFingerDown className="ml-1 text-2xl" />
 					</p>
 
 					{features.map((group, idx) => (

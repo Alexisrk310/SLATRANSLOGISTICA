@@ -1,6 +1,8 @@
 export interface ServiceCardProps {
 	icon: React.ReactNode;
 	title: string;
+	className?: string;
+	onClick?: () => void;
 	description: string;
 	disabled?: boolean;
 }
@@ -14,6 +16,7 @@ export interface FeatureGroup {
 export interface ServicioHeroProps {
 	title: string;
 	description: string;
+	subDescription?: string;
 	className?: string;
 	icon: React.ReactNode;
 	imageUrl: string;

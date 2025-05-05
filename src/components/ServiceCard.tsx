@@ -3,11 +3,14 @@ import { ServiceCardProps } from '@/interfaces/services.Interfaces';
 const ServiceCard = ({
 	icon,
 	title,
+	className = '',
+	onClick = () => {},
 	description,
 	disabled = false,
 }: ServiceCardProps) => (
 	<div
-		className={`animated-border-top shadow-md rounded-xl p-6 text-center h-56 transition duration-300 flex flex-col items-center justify-center 
+		onClick={onClick}
+		className={`${className} cursor-pointer animated-border-top shadow-md rounded-xl p-6 text-center h-56 transition duration-300 flex flex-col items-center justify-center 
 			${
 				disabled
 					? 'bg-gray-200 opacity-50 pointer-events-none'
