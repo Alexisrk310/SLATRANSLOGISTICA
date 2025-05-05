@@ -97,10 +97,10 @@ export default function Home() {
 			</FallingSection>
 			<FallingSection>
 				<p className="text-center mb-8 text-sky-600 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mt-10 leading-relaxed">
-					Somos una empresa de logística dedicada a conectar destinos,
-					optimizando cada entrega con compromiso y precisión. Trabajamos
-					diariamente para cumplir tus necesidades, llevando tus cargas a donde
-					el tiempo y la confianza se encuentran.
+					Somos una empresa de transporte ygit  logística dedicada a conectar
+					destinos, optimizando cada entrega con compromiso y precisión.
+					Trabajamos diariamente para cumplir tus necesidades, llevando tus
+					cargas a donde el tiempo y la confianza se encuentran.
 				</p>
 			</FallingSection>
 		</>
