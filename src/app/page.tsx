@@ -78,19 +78,19 @@ export default function Home() {
 							name="Leonardo Bustos De Avila"
 							role="Gerente"
 							description="Lidera y supervisa todas las operaciones de la empresa, asegurando un servicio de excelencia."
-							imageSrc="/brands/flexindustrial.jpeg"
+							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
 						<AvatarCard
 							name="Ana Mercedes Reales Palencia"
 							role="Coordinadora de operaciones"
 							description="Organiza la logística de transporte y coordina los recursos necesarios."
-							imageSrc="/brands/flexindustrial.jpeg"
+							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
 						<AvatarCard
 							name="Alexis Miguel Gutierrez Ruiz"
 							role="Ingeniero de sistemas"
 							description="Crea y mantiene la infraestructura de sistemas tecnológicos de la empresa."
-							imageSrc="/brands/flexindustrial.jpeg"
+							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
 					</div>
 				</section>

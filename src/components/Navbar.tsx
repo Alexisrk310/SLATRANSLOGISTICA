@@ -46,7 +46,7 @@ const Navbar = () => {
 						<Link
 							href="https://wa.me/+573245837514"
 							className="bg-white text-sky-500 px-4 py-2 rounded-xl font-semibold shadow hover:bg-sky-100 transition">
-							Comenzar
+							Cotizar
 						</Link>
 					</div>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
 						href="https://wa.me/+573245837514"
 						onClick={toggleMenu}
 						className="bg-white text-sky-500 px-4 py-2 rounded-xl font-semibold shadow hover:bg-sky-100 transition">
-						Comenzar
+						Cotizar
 					</Link>
 				</div>
 			</div>
