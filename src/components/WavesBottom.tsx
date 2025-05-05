@@ -2,7 +2,10 @@ import React from 'react';
 
 const WavesBottom = () => {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			className="block -mt-1">
 			<path
 				fill="#0ea5e9"
 				fillOpacity="1"
