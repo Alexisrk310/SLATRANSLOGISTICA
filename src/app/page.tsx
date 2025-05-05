@@ -36,7 +36,7 @@ export default function Home() {
 			<FallingSection>
 				<section className="text-center py-12 px-4">
 					<h2 className="text-4xl font-extrabold text-sky-500 mb-8 drop-shadow-md">
-						NUESTROS ALIADOS
+						NUESTROS CLIENTES
 					</h2>
 					<BrandsCarousel brands={alliedBrandData} />
 				</section>
