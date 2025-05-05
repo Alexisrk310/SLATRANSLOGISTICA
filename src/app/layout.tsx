@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'SLA TRANSLOGISTICA',
+	title: 'TRANSLOGISTICA SLA S.A.S',
 	description: `Nuestra empresa se especializa en ofrecer soluciones integrales de
 				 transporte de carga terrestre garantizando puntualidad, seguridad
 				 y eficiencia en cada servicio.`,
