@@ -40,8 +40,11 @@ export default function Footer() {
 
 				<div className="flex flex-col gap-1 min-w-[180px]">
 					<h4 className="font-extrabold drop-shadow mb-2">Ubicación</h4>
-					<a href="#" className="text-sm hover:underline">
-						Ver mapa Colombia
+					<a
+						href="https://maps.app.goo.gl/kwKRW9dnPtCJdxdb6"
+						target="__blank"
+						className="text-sm hover:underline">
+						Ver mapa de ubicación
 					</a>
 				</div>
 			</div>
