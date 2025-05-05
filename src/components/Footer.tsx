@@ -25,14 +25,10 @@ export default function Footer() {
 				<div className="flex flex-col gap-1 min-w-[180px]">
 					<h4 className="font-extrabold drop-shadow mb-2">Teléfono</h4>
 					<p className="text-sm">+57 3245837514</p>
-					<p className="text-sm">+57 3245837514</p>
-					<p className="text-sm">+57 3245837514</p>
 				</div>
 
 				<div className="flex flex-col gap-1 min-w-[180px]">
 					<h4 className="font-extrabold drop-shadow mb-2">WhatsApp</h4>
-					<p className="text-sm">+57 3245837514</p>
-					<p className="text-sm">+57 3245837514</p>
 					<p className="text-sm">+57 3245837514</p>
 				</div>
 

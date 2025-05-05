@@ -52,7 +52,7 @@ const Navbar = () => {
 
 					{/* Mobile Menu Button */}
 					<div className="md:hidden">
-						<button onClick={toggleMenu}>
+						<button onClick={toggleMenu} aria-label="Toggle menu">
 							{menuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
 						</button>
 					</div>

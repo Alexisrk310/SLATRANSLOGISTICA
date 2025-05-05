@@ -5,6 +5,7 @@ import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
 import { alliedBrandData } from '@/data/brands/alliedBrand.data';
+
 import Image from 'next/image';
 
 export default function Home() {

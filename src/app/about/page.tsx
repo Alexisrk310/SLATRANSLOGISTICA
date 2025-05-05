@@ -75,7 +75,7 @@ const about = () => {
 
 			{/* Sección adicional */}
 			<FallingSection>
-				<section className="w-full bg-white py-16 px-6 text-center ">
+				<section className="w-full py-16 px-6 text-center ">
 					<h2 className="text-4xl font-bold text-sky-600 mb-6">
 						Nuestros Valores
 					</h2>

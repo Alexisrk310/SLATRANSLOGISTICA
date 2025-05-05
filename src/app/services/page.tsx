@@ -2,7 +2,10 @@
 import FallingSection from '@/components/FallingSection';
 import ServiceCard from '@/components/ServiceCard';
 import ServicioHero from '@/components/ServicioHero';
-import { transporteFeatures } from '@/data/services/storage.data';
+import { freightForwardingFeatures } from '@/data/services/freightForwarding.data';
+import { integralLogisticsFeatures } from '@/data/services/integralLogistics.data';
+import { loadingAndUnloadingFeatures } from '@/data/services/loadingAndUnloading.data';
+import { storageFeatures } from '@/data/services/storage.data';
 
 import React, { useRef } from 'react';
 import {
@@ -84,7 +87,7 @@ const services = () => {
 					className="mt-16 services-hero"
 					icon={<FaTruckMoving size={32} className="text-sky-500" />}
 					imageUrl="/servicios/transporte-de-carga.png"
-					features={transporteFeatures}
+					features={freightForwardingFeatures}
 					reversed={true}
 				/>
 			</FallingSection>
@@ -95,7 +98,7 @@ const services = () => {
 					className="mt-0"
 					icon={<FaWarehouse size={32} className="text-sky-500" />}
 					imageUrl="/servicios/bodegas.png"
-					features={transporteFeatures}
+					features={storageFeatures}
 					reversed={false}
 				/>
 			</FallingSection>
@@ -106,7 +109,7 @@ const services = () => {
 					className=""
 					icon={<FaDolly size={32} className="text-sky-500" />}
 					imageUrl="/servicios/cargue-y-descargue.png"
-					features={transporteFeatures}
+					features={loadingAndUnloadingFeatures}
 					reversed={true}
 				/>
 			</FallingSection>
@@ -117,7 +120,7 @@ const services = () => {
 					className=""
 					icon={<FaProjectDiagram size={32} className="text-sky-500" />}
 					imageUrl="/servicios/logistica.png"
-					features={transporteFeatures}
+					features={integralLogisticsFeatures}
 					reversed={false}
 				/>
 			</FallingSection>
