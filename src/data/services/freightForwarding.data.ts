@@ -2,7 +2,7 @@ export const freightForwardingFeatures = [
 	{
 		title: 'Importación',
 		items: [
-			'Traslado de contenedor lleno desde Terminal portuario a Patio como: Parquiamericas, Zona Franca la Candelaria, Zona Franca Parque Central',
+			'Traslado de contenedor lleno desde Terminal portuario a Patio como: Parquiamericas, Zona Franca la Candelaria o Zona Franca Parque Central',
 			// 'Traslado de contenedor lleno desde Terminal portuario a Parquiamericas',
 			// 'Traslado de contenedor lleno desde Terminal portuario a Zona Franca la Candelaria',
 			// 'Traslado de contenedor lleno desde Terminal portuario a Zona Franca Parque Central',
