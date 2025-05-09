@@ -1,13 +1,7 @@
 // components/AvatarCard.tsx
 import React from 'react';
 import Image from 'next/image';
-
-interface AvatarCardProps {
-	name: string;
-	role: string;
-	description: string;
-	imageSrc: string;
-}
+import { AvatarCardProps } from '@/interfaces/card.Interface';
 
 const AvatarCard: React.FC<AvatarCardProps> = ({
 	name,

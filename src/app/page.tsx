@@ -1,5 +1,6 @@
 'use client';
 import AvatarCard from '@/components/AvatarCard';
+import AvatarCardHorizontal from '@/components/AvatarCardHorizontal';
 import BrandsCarousel from '@/components/BrandsCarousel';
 import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
@@ -92,9 +93,52 @@ export default function Home() {
 							description="Crea y mantiene la infraestructura de sistemas tecnológicos de la empresa."
 							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
+						<AvatarCard
+							name="Lisseth Del Carmen López"
+							role="Asesora de comercio exterior"
+							description="Coordina, asesora y gestiona los procesos relacionados con la importación y exportación de mercancías"
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/>
+						<AvatarCard
+							name="Lorena Sofia Bustos"
+							role="Auxiliar administrativa"
+							description="Apoya en las labores operativas y administrativas"
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/>
 					</div>
 				</section>
 			</FallingSection>
+
+			<div className="min-h-screen flex justify-center items-start py-10">
+				<FallingSection>
+					<div className="bg-white rounded-2xl p-8 w-full max-w-4xl space-y-6">
+						{/* <AvatarCardHorizontal
+							name={'Selso Month'}
+							role={'Conductor'}
+							description={
+								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
+							}
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/>
+						<AvatarCardHorizontal
+							name={'Selso Month'}
+							role={'Conductor'}
+							description={
+								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
+							}
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/>
+						<AvatarCardHorizontal
+							name={'Selso Month'}
+							role={'Conductor'}
+							description={
+								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
+							}
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/> */}
+					</div>
+				</FallingSection>
+			</div>
 			<FallingSection>
 				<p className="text-center mb-8 text-sky-600 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mt-10 leading-relaxed">
 					Somos una empresa de transporte y logística dedicada a conectar
