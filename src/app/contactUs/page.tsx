@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import FallingSection from '@/components/FallingSection';
-
+import emailjs from '@emailjs/browser';
 const ContactPage = () => {
 	const {
 		register,
@@ -11,10 +11,27 @@ const ContactPage = () => {
 		formState: { errors },
 		reset,
 	} = useForm<FormData>();
+	const formRef = useRef(null);
 
-	const onSubmit = (data: FormData) => {
-		const message = `Nombre: ${data.name}\n\nCorreo: ${data.email}\n\nTeléfono: ${data.tel}\n\nMensaje: ${data.description}`;
-		console.log(message);
+	const onSubmit = () => {
+		// const message = `Nombre: ${data.name}\n\nCorreo: ${data.email}\n\nTeléfono: ${data.tel}\n\nMensaje: ${data.description}`;
+		emailjs
+			.sendForm(
+				'service_0l6rheu',
+				'template_axvzoia',
+				formRef.current as any,
+				'TjewiMush9fCx2oFx'
+			)
+			.then(
+				() => {
+					alert('Mensaje enviado con éxito');
+					location.reload();
+				},
+				() => {
+					alert('Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+				}
+			);
+
 		reset();
 	};
 
@@ -55,6 +72,7 @@ const ContactPage = () => {
 					</h2>
 				</FallingSection>
 				<form
+					ref={formRef}
 					onSubmit={handleSubmit(onSubmit)}
 					className="max-w-3xl mx-auto space-y-6 text-left">
 					<div className="flex flex-col">
