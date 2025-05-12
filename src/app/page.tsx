@@ -1,11 +1,12 @@
 'use client';
 import AvatarCard from '@/components/AvatarCard';
-import AvatarCardHorizontal from '@/components/AvatarCardHorizontal';
+import ProfileCard from '@/components/ProfileCard';
 import BrandsCarousel from '@/components/BrandsCarousel';
 import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
 import { alliedBrandData } from '@/data/brands/alliedBrand.data';
+import { drivers } from '@/data/workers/drivers';
 
 import Image from 'next/image';
 
@@ -109,38 +110,24 @@ export default function Home() {
 				</section>
 			</FallingSection>
 
-			<div className="min-h-screen flex justify-center items-start py-10">
-				<FallingSection>
-					<div className="bg-white rounded-2xl p-8 w-full max-w-4xl space-y-6">
-						{/* <AvatarCardHorizontal
-							name={'Selso Month'}
-							role={'Conductor'}
-							description={
-								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
-							}
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCardHorizontal
-							name={'Selso Month'}
-							role={'Conductor'}
-							description={
-								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
-							}
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCardHorizontal
-							name={'Selso Month'}
-							role={'Conductor'}
-							description={
-								'Conductor con más de 10 años de experiencia en transporte de carga, garantizando seguridad y puntualidad en cada entrega.'
-							}
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/> */}
-					</div>
-				</FallingSection>
-			</div>
 			<FallingSection>
-				<p className="text-center mb-8 text-sky-600 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mt-10 leading-relaxed">
+				<div className="px-4 flex flex-col items-center gap-4">
+					<h1 className="text-4xl font-extrabold text-sky-500 mt-10 mb-6 drop-shadow-md">
+						OPERADORES
+					</h1>
+
+					{drivers.map((driver, index) => (
+						<ProfileCard
+							key={index}
+							nombre={driver.nombre}
+							descripcion={driver.descripcion}
+							imageSrc={driver.imageSrc}
+						/>
+					))}
+				</div>
+			</FallingSection>
+			<FallingSection>
+				<p className="text-center mb-8 mt-10 text-sky-600 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto  leading-relaxed">
 					Somos una empresa de transporte y logística dedicada a conectar
 					destinos, optimizando cada entrega con compromiso y precisión.
 					Trabajamos diariamente para cumplir tus necesidades, llevando tus
