@@ -93,6 +93,8 @@ const Navbar = () => {
 					</Link>
 					<Link
 						href="https://wa.me/+573245837514"
+						rel="noopener noreferrer"
+						target="_blank"
 						onClick={toggleMenu}
 						className="bg-white text-sky-500 px-4 py-2 rounded-xl font-semibold shadow hover:bg-sky-100 transition">
 						Cotizar
