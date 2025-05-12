@@ -23,13 +23,18 @@ export default function Home() {
 							height={700}
 							className="rounded-3xl w-full lg:w-1/2 shadow-xl object-cover"
 						/>
-						<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed lg:w-1/2">
-							Nuestra empresa se especializa en ofrecer soluciones integrales de
-							transporte de carga terrestre garantizando puntualidad, seguridad
-							y eficiencia en cada servicio. Contamos con una flota moderna y
-							personal capacitado que asegura el cumplimiento de los más altos
-							estándares de calidad.
-						</p>
+						<div className="flex flex-col justify-center gap-4 lg:w-1/2">
+							<h1 className="text-4xl font-extrabold text-white mb-6 text-center">
+								TRANSLOGÍSTICA SLA
+							</h1>
+							<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed">
+								Nuestra empresa se especializa en ofrecer soluciones integrales
+								de transporte de carga terrestre garantizando puntualidad,
+								seguridad y eficiencia en cada servicio. Contamos con una flota
+								moderna y personal capacitado que asegura el cumplimiento de los
+								más altos estándares de calidad.
+							</p>
+						</div>
 					</div>
 				</section>
 				<WavesBottom />
@@ -112,9 +117,9 @@ export default function Home() {
 
 			<FallingSection>
 				<div className="px-4 flex flex-col items-center gap-4">
-					<h1 className="text-4xl font-extrabold text-sky-500 mt-10 mb-6 drop-shadow-md">
+					<h2 className="text-4xl font-extrabold text-sky-500 mt-10 mb-6 drop-shadow-md">
 						OPERADORES
-					</h1>
+					</h2>
 
 					{drivers.map((driver, index) => (
 						<ProfileCard
