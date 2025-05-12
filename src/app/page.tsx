@@ -111,11 +111,17 @@ export default function Home() {
 							description="Apoya en las labores operativas y administrativas"
 							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
+						<AvatarCard
+							name="Selso Month"
+							role="Jefe de Patio"
+							description="Supervisa y coordina las operaciones en el patio de carga."
+							imageSrc="/logos/slatranslogistica-logo.png"
+						/>
 					</div>
 				</section>
 			</FallingSection>
 
-			<FallingSection>
+			{/* <FallingSection>
 				<div className="px-4 flex flex-col items-center gap-4">
 					<h2 className="text-4xl font-extrabold text-sky-500 mt-10 mb-6 drop-shadow-md">
 						OPERADORES
@@ -131,7 +137,7 @@ export default function Home() {
 						/>
 					))}
 				</div>
-			</FallingSection>
+			</FallingSection> */}
 			<FallingSection>
 				<p className="text-center mb-8 mt-10 text-sky-600 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto  leading-relaxed">
 					Somos una empresa de transporte y logística dedicada a conectar
