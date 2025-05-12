@@ -31,6 +31,12 @@ export const metadata: Metadata = {
 		'TRANSLOGISTICA SLA',
 		'Carga pesada',
 		'Distribución segura',
+		'Translogisticasla',
+		'Translogisticaslasas',
+		'Translogistica sla',
+		'Translogistica sla sas',
+		'Translogistica',
+		'Logistica',
 
 		// Transporte de Carga
 		'Transporte de carga terrestre en Colombia',
