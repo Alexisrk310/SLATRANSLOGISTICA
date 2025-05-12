@@ -27,6 +27,8 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
 
 			<a
 				href={`https://wa.me/+57${tel}`}
+				target="_blank"
+				rel="noopener noreferrer"
 				className="text-gray-600  font-light flex items-center justify-center mb-2">
 				<FaWhatsapp className="mr-1" />
 				{tel}
