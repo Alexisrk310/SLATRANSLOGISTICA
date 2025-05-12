@@ -30,13 +30,15 @@ const Navbar = () => {
 						<Link href="/" className="hover:text-white/80 transition">
 							Inicio
 						</Link>
-						<Link href="/services" className="hover:text-white/80 transition">
+						<Link href="/servicios" className="hover:text-white/80 transition">
 							Servicios
 						</Link>
-						<Link href="/about" className="hover:text-white/80 transition">
+						<Link href="/conocenos" className="hover:text-white/80 transition">
 							Conócenos
 						</Link>
-						<Link href="/contactUs" className="hover:text-white/80 transition">
+						<Link
+							href="/contactanos"
+							className="hover:text-white/80 transition">
 							Contáctanos
 						</Link>
 					</div>
@@ -72,19 +74,19 @@ const Navbar = () => {
 						Inicio
 					</Link>
 					<Link
-						href="/services"
+						href="/servicios"
 						onClick={toggleMenu}
 						className="text-lg hover:opacity-80">
 						Servicios
 					</Link>
 					<Link
-						href="/about"
+						href="/conocenos"
 						onClick={toggleMenu}
 						className="text-lg hover:opacity-80">
 						Conócenos
 					</Link>
 					<Link
-						href="/contactUs"
+						href="/contactanos"
 						onClick={toggleMenu}
 						className="text-lg hover:opacity-80">
 						Contáctanos

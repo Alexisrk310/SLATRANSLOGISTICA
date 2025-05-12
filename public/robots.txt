@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.translogisticasla.com
+
+# Sitemaps
+Sitemap: https://www.translogisticasla.com/sitemap.xml
