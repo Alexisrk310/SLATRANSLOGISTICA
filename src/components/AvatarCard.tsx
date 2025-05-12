@@ -21,7 +21,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
 				/>
 			</div>
 			<h2 className="text-[#38bdf8] font-semibold text-xl">{name}</h2>
-			<h3 className="text-gray-600 mb-2">{role}</h3>
+			<h3 className="text-gray-600 mb-2 font-light">{role}</h3>
 			<p className="text-gray-700 text-sm">{description}</p>
 		</div>
 	);

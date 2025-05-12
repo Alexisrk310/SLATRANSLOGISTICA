@@ -96,7 +96,7 @@ export default function Home() {
 						/>
 						<AvatarCard
 							name="Lisseth Del Carmen López"
-							role="Asesora de comercio exterior"
+							role="Asesora externa de comercio exterior"
 							description="Coordina, asesora y gestiona los procesos relacionados con la importación y exportación de mercancías"
 							imageSrc="/logos/slatranslogistica-logo.png"
 						/>
@@ -120,6 +120,7 @@ export default function Home() {
 						<ProfileCard
 							key={index}
 							nombre={driver.nombre}
+							role={driver.role}
 							descripcion={driver.descripcion}
 							imageSrc={driver.imageSrc}
 						/>
