@@ -14,7 +14,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
 }) => {
 	return (
 		<FallingSection>
-			<div className="bg-white border border-[#38bdf8] rounded-xl shadow-lg p-6 text-center w-xs max-w-xs">
+			<div className="bg-white border border-[#38bdf8]  min-h-80 rounded-xl shadow-lg p-6 text-center w-xs max-w-xs">
 				<div className="flex justify-center mb-4">
 					<Image
 						src={imageSrc}

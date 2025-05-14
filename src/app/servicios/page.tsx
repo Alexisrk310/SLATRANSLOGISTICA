@@ -37,8 +37,8 @@ const services = () => {
 						almacenamiento y logística.
 					</p>
 				</FallingSection>
-				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
 
+				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
 				<div className="grid md:grid-cols-3 items-center gap-8">
 					<ServiceCard
 						onClick={() => handleScroll(freightForwardingRef)}
