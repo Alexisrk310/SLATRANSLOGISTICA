@@ -37,47 +37,48 @@ const services = () => {
 						almacenamiento y logística.
 					</p>
 				</FallingSection>
-				<FallingSection>
-					<div className="grid md:grid-cols-3 items-center gap-8">
-						<ServiceCard
-							onClick={() => handleScroll(freightForwardingRef)}
-							icon={<FaTruckMoving size={40} className="text-sky-400" />}
-							title="Transporte de Carga"
-							description="Transporte en contenedores y carga suelta. Actualmente cubrimos rutas locales y regionales."
-						/>
-						<ServiceCard
-							onClick={() => handleScroll(storageRef)}
-							icon={<FaWarehouse size={40} className="text-sky-400" />}
-							title="Almacenamiento"
-							description="Servicio de almacenamiento en bodegas para todo tipo de mercancías."
-						/>
-						<ServiceCard
-							onClick={() => handleScroll(loadingAndUnloadingRef)}
-							icon={<FaDolly size={40} className="text-sky-400" />}
-							title="Cargue y Descargue"
-							description="Cargue y descargue de mercancías con máquinas especializadas."
-						/>
-						<ServiceCard
-							disabled={true}
-							icon={<FaLock size={40} className="text-gray-700" />}
-							title="PRONTO"
-							description=""
-						/>
-						<ServiceCard
-							onClick={() => handleScroll(integralLogisticsRef)}
-							icon={<FaProjectDiagram size={40} className="text-sky-400" />}
-							title="Logística"
-							description="Acompañamiento logístico, consolidación, desconsolidación, empaque, y vaciado de contenedores."
-						/>
+				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
 
-						<ServiceCard
-							disabled={true}
-							icon={<FaLock size={40} className="text-gray-700" />}
-							title="PRONTO"
-							description=""
-						/>
-					</div>
-				</FallingSection>
+				<div className="grid md:grid-cols-3 items-center gap-8">
+					<ServiceCard
+						onClick={() => handleScroll(freightForwardingRef)}
+						icon={<FaTruckMoving size={40} className="text-sky-400" />}
+						title="Transporte de Carga"
+						description="Transporte en contenedores y carga suelta. Actualmente cubrimos rutas locales y regionales."
+					/>
+					<ServiceCard
+						onClick={() => handleScroll(storageRef)}
+						icon={<FaWarehouse size={40} className="text-sky-400" />}
+						title="Almacenamiento"
+						description="Servicio de almacenamiento en bodegas para todo tipo de mercancías."
+					/>
+					<ServiceCard
+						onClick={() => handleScroll(loadingAndUnloadingRef)}
+						icon={<FaDolly size={40} className="text-sky-400" />}
+						title="Cargue y Descargue"
+						description="Cargue y descargue de mercancías con máquinas especializadas."
+					/>
+					<ServiceCard
+						disabled={true}
+						icon={<FaLock size={40} className="text-gray-700" />}
+						title="PRONTO"
+						description=""
+					/>
+					<ServiceCard
+						onClick={() => handleScroll(integralLogisticsRef)}
+						icon={<FaProjectDiagram size={40} className="text-sky-400" />}
+						title="Logística"
+						description="Acompañamiento logístico, consolidación, desconsolidación, empaque, y vaciado de contenedores."
+					/>
+
+					<ServiceCard
+						disabled={true}
+						icon={<FaLock size={40} className="text-gray-700" />}
+						title="PRONTO"
+						description=""
+					/>
+				</div>
+
 				<FallingSection>
 					<button
 						onClick={() => handleScroll(freightForwardingRef)}

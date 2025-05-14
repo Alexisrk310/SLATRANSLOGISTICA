@@ -58,7 +58,7 @@ const ContactPage = () => {
 						<FaPhoneAlt /> Llamar
 					</a>
 					<a
-						href="mailto:info@translogisticasla.com"
+						href="mailto:operaciones@translogisticasla.com"
 						className="flex items-center gap-2 bg-sky-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-sky-700 transition">
 						<FaEnvelope /> Correo
 					</a>

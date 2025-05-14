@@ -75,55 +75,56 @@ export default function Home() {
 				<WavesBottom />
 			</FallingSection>
 
-			<FallingSection>
-				<section className="py-12 px-4 text-center">
+			<section className="py-12 px-4 text-center">
+				<FallingSection>
 					<h2 className="text-4xl font-extrabold text-sky-500 mb-16 drop-shadow-md">
 						NUESTROS COLABORADORES
 					</h2>
-					<div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
-						<AvatarCard
-							name="Leonardo Bustos De Avila"
-							role="Gerente"
-							description="Lidera y supervisa todas las operaciones de la empresa, asegurando un servicio de excelencia."
-							tel="3153571251"
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCard
-							name="Ana Mercedes Reales Palencia"
-							role="Coordinadora de operaciones"
-							description="Organiza la logística de transporte y coordina los recursos necesarios."
-							tel="3245837514"
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCard
-							name="Alexis Miguel Gutierrez Ruiz"
-							role="Ingeniero de sistemas"
-							description="Crea y mantiene la infraestructura de sistemas tecnológicos de la empresa."
-							tel="3012266530"
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCard
-							name="Lisseth Del Carmen López"
-							role="Asesora externa de comercio exterior"
-							description="Coordina, asesora y gestiona los procesos relacionados con la importación y exportación de mercancías"
-							tel="3185445210"
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-						<AvatarCard
-							name="Selso Month"
-							role="Jefe de Patio"
-							description="Supervisa y coordina las operaciones en el patio de carga."
-							tel="3126771391"
-							imageSrc="/logos/slatranslogistica-logo.png"
-						/>
-					</div>
-				</section>
-			</FallingSection>
+				</FallingSection>
+				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
+				<div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
+					<AvatarCard
+						name="Leonardo Bustos De Avila"
+						role="Gerente"
+						description="Lidera y supervisa todas las operaciones de la empresa, asegurando un servicio de excelencia."
+						tel="3153571251"
+						imageSrc="/logos/slatranslogistica-logo.png"
+					/>
+					<AvatarCard
+						name="Ana Mercedes Reales Palencia"
+						role="Coordinadora de operaciones"
+						description="Organiza la logística de transporte y coordina los recursos necesarios."
+						tel="3245837514"
+						imageSrc="/logos/slatranslogistica-logo.png"
+					/>
+					<AvatarCard
+						name="Alexis Miguel Gutierrez Ruiz"
+						role="Ingeniero de sistemas"
+						description="Crea y mantiene la infraestructura de sistemas tecnológicos de la empresa."
+						tel="3012266530"
+						imageSrc="/logos/slatranslogistica-logo.png"
+					/>
+					<AvatarCard
+						name="Lisseth Del Carmen López"
+						role="Asesora externa de comercio exterior"
+						description="Coordina, asesora y gestiona los procesos relacionados con la importación y exportación de mercancías"
+						tel="3185445210"
+						imageSrc="/logos/slatranslogistica-logo.png"
+					/>
+					<AvatarCard
+						name="Selso Month"
+						role="Jefe de Patio"
+						description="Supervisa y coordina las operaciones en el patio de carga."
+						tel="3126771391"
+						imageSrc="/logos/slatranslogistica-logo.png"
+					/>
+				</div>
+			</section>
 
 			{/* <FallingSection>
 				<div className="px-4 flex flex-col items-center gap-4">
 					<h2 className="text-4xl font-extrabold text-sky-500 mt-10 mb-6 drop-shadow-md">
-						OPERADORES
+					OPERADORES
 					</h2>
 
 					{drivers.map((driver, index) => (
