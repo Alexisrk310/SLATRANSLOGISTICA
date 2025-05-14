@@ -1,8 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.translogisticasla.com',
+    siteUrl: 'https://translogisticasla.com/',
     generateRobotsTxt: true,
-    changefreq: 'monthly',
+    changefreq: 'daily',
     priority: 0.7,
     sitemapSize: 5000,
 };

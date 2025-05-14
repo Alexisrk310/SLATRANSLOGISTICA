@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.translogisticasla.com
+Host: https://translogisticasla.com/
 
 # Sitemaps
-Sitemap: https://www.translogisticasla.com/sitemap.xml
+Sitemap: https://translogisticasla.com/sitemap.xml
