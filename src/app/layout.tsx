@@ -15,12 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://translogisticasla.com/'),
 	title: 'TRANSLOGISTICA SLA S.A.S | Transporte y Logística en Colombia',
 	description: `En TRANSLOGISTICA SLA S.A.S nos especializamos en brindar soluciones logísticas de transporte de carga terrestre, con un enfoque en seguridad, puntualidad y eficiencia. Ofrecemos servicios de transporte de mercancías, carga pesada y distribución nacional, garantizando un servicio confiable y profesional en todo el país. ¡Confíe en nosotros para sus necesidades logísticas y de transporte!`,
 
 	icons: {
 		icon: '/logos/favicon.ico',
 	},
+
 	keywords: [
 		// Principales
 		'Transporte de carga',
