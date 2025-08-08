@@ -1,12 +1,10 @@
 'use client';
 import AvatarCard from '@/components/AvatarCard';
-import ProfileCard from '@/components/ProfileCard';
 import BrandsCarousel from '@/components/BrandsCarousel';
 import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
 import { alliedBrandData } from '@/data/brands/alliedBrand.data';
-import { drivers } from '@/data/workers/drivers';
 
 import Image from 'next/image';
 
@@ -14,7 +12,7 @@ export default function Home() {
 	return (
 		<>
 			<FallingSection>
-				<section className="w-full bg-gradient-to-b from-sky-400 to-sky-500 text-white px-6 py-16">
+				<section className="w-full bg-[#0ea5e9] text-white px-6 py-16 -mt-1">
 					<div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
 						<Image
 							src="/tractocamion/planificacion-de-logistica.png"
