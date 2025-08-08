@@ -10,7 +10,7 @@ export default function Footer() {
 	}, []);
 
 	return (
-		<footer className="bg-gradient-to-b from-sky-400 to-sky-500 text-white px-6 md:px-16 lg:px-24 py-10">
+		<footer className="bg-[#0ea5e9] text-white px-6 md:px-16 lg:px-24 py-10">
 			<div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left justify-center gap-10 flex-wrap">
 				<div className="flex flex-col gap-2 max-w-xs">
 					<Image
