@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React, { useRef, useLayoutEffect, useState } from 'react';
 
 interface Brand {
@@ -51,7 +52,9 @@ const BrandsCarousel: React.FC<BrandsCarouselProps> = ({
 					}}
 					style={{ whiteSpace: 'nowrap' }}>
 					{itemsToRender.map((brand, index) => (
-						<img
+						<Image
+							width={160}
+							height={160}
 							key={brand.id + '-' + index}
 							src={brand.src}
 							alt={brand.alt}

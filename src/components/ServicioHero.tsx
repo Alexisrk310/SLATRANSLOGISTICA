@@ -1,4 +1,5 @@
 import { ServicioHeroProps } from '@/interfaces/services.Interfaces';
+import Image from 'next/image';
 import { TbHandFingerDown } from 'react-icons/tb';
 
 const ServicioHero: React.FC<ServicioHeroProps> = ({
@@ -22,7 +23,9 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 				} gap-10 items-center`}>
 				{/* Imagen */}
 				<div className="w-full">
-					<img
+					<Image
+						width={600}
+						height={400}
 						src={imageUrl}
 						alt={title}
 						className="rounded-xl shadow-lg w-full h-auto max-h-[400px] object-cover aspect-[4/3]"
