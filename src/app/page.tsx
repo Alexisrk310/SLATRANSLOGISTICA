@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<>
 			<FallingSection>
-				<section className="w-full bg-sky-50 px-6 py-16 -mt-1">
+				<section className="w-full bg-sky-50 px-6 py-16 ">
 					<div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
 						<Image
 							src="/tractocamion/planificacion-de-logistica.png"
