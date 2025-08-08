@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<>
 			<FallingSection>
-				<section className="w-full bg-[#0ea5e9] text-white px-6 py-16 -mt-1">
+				<section className="w-full bg-sky-50 px-6 py-16 -mt-1">
 					<div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
 						<Image
 							src="/tractocamion/planificacion-de-logistica.png"
@@ -24,10 +24,10 @@ export default function Home() {
 							className="rounded-3xl w-full lg:w-1/2 shadow-xl object-cover"
 						/>
 						<div className="flex flex-col justify-center gap-4 lg:w-1/2">
-							<h1 className="text-4xl font-extrabold text-white mb-6 text-center">
+							<h1 className="text-4xl font-extrabold mb-6 text-center text-sky-500">
 								TRANSLOGÍSTICA SLA
 							</h1>
-							<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed">
+							<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed text-sky-700">
 								Nuestra empresa se especializa en ofrecer soluciones integrales
 								de transporte de carga terrestre garantizando puntualidad,
 								seguridad y eficiencia en cada servicio. Contamos con una flota
@@ -37,11 +37,10 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<WavesBottom />
 			</FallingSection>
 
 			<FallingSection>
-				<section className="text-center py-12 px-4">
+				<section className="text-center my-28 px-4">
 					<h2 className="text-4xl font-extrabold text-sky-500 mb-8 drop-shadow-md">
 						NUESTROS CLIENTES
 					</h2>
@@ -51,7 +50,7 @@ export default function Home() {
 
 			<FallingSection>
 				<WavesTop />
-				<section className="w-full bg-[#0ea5e9] text-white px-6 py-16">
+				<section className="w-full bg-sky-400 text-white px-6 py-16">
 					<div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
 						<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed lg:w-1/2">
 							Ofrecemos servicios de alta calidad en transporte de carga y
@@ -73,9 +72,30 @@ export default function Home() {
 					</div>
 				</section>
 				<WavesBottom />
+				{/* <section className="w-full bg-sky-50 text-sky-700 px-6 py-16">
+					<div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+						<p className="text-center text-lg sm:text-xl md:text-2xl leading-relaxed lg:w-1/2">
+							Ofrecemos servicios de alta calidad en transporte de carga y
+							logística, adaptándonos a las necesidades de nuestros clientes.
+							Nuestra misión es proporcionar soluciones eficientes y seguras,
+							garantizando la satisfacción del cliente a través de un servicio
+							confiable y puntual. Con un equipo profesional y tecnología
+							avanzada, nos comprometemos a optimizar cada proceso logístico,
+							asegurando que sus cargas lleguen a su destino en perfectas
+							condiciones y a tiempo.
+						</p>
+						<Image
+							src="/tractocamion/cargue.png"
+							alt="Tractocamión 2"
+							width={700}
+							height={700}
+							className="rounded-3xl w-full lg:w-1/2 shadow-xl object-cover"
+						/>
+					</div>
+				</section> */}
 			</FallingSection>
 
-			<section className="py-12 px-4 text-center">
+			<section className="pb-12 px-4 text-center">
 				<FallingSection>
 					<h2 className="text-4xl font-extrabold text-sky-500 mb-16 drop-shadow-md">
 						NUESTROS COLABORADORES
