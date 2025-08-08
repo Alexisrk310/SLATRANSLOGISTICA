@@ -1,10 +1,12 @@
 'use client';
 import AvatarCard from '@/components/AvatarCard';
 import BrandsCarousel from '@/components/BrandsCarousel';
+import FallingCard from '@/components/FallingCard';
 import FallingSection from '@/components/FallingSection';
 import WavesBottom from '@/components/WavesBottom';
 import WavesTop from '@/components/WavesTop';
 import { alliedBrandData } from '@/data/brands/alliedBrand.data';
+import { teamMembers } from '@/data/team/teamMembers';
 
 import Image from 'next/image';
 
@@ -81,41 +83,11 @@ export default function Home() {
 				</FallingSection>
 				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
 				<div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
-					<AvatarCard
-						name="Leonardo Bustos De Avila"
-						role="Gerente"
-						description="Lidera y supervisa todas las operaciones de la empresa, asegurando un servicio de excelencia."
-						tel="3153571251"
-						imageSrc="/logos/slatranslogistica-logo.png"
-					/>
-					<AvatarCard
-						name="Ana Mercedes Reales Palencia"
-						role="Coordinadora de operaciones"
-						description="Organiza la logística de transporte y coordina los recursos necesarios."
-						tel="3245837514"
-						imageSrc="/logos/slatranslogistica-logo.png"
-					/>
-					<AvatarCard
-						name="Alexis Miguel Gutierrez Ruiz"
-						role="Ingeniero de sistemas"
-						description="Crea y mantiene la infraestructura de sistemas tecnológicos de la empresa."
-						tel="3012266530"
-						imageSrc="/logos/slatranslogistica-logo.png"
-					/>
-					<AvatarCard
-						name="Lisseth Del Carmen López"
-						role="Asesora externa de comercio exterior"
-						description="Coordina, asesora y gestiona los procesos relacionados con la importación y exportación de mercancías"
-						tel="3185445210"
-						imageSrc="/logos/slatranslogistica-logo.png"
-					/>
-					<AvatarCard
-						name="Selso Month"
-						role="Jefe de Patio"
-						description="Supervisa y coordina las operaciones en el patio de carga."
-						tel="3126771391"
-						imageSrc="/logos/slatranslogistica-logo.png"
-					/>
+					{teamMembers.map((member, index) => (
+						<FallingCard index={index} key={index}>
+							<AvatarCard {...member} />
+						</FallingCard>
+					))}
 				</div>
 			</section>
 

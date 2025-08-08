@@ -1,10 +1,12 @@
 'use client';
+import FallingCard from '@/components/FallingCard';
 import FallingSection from '@/components/FallingSection';
 import ServiceCard from '@/components/ServiceCard';
 import ServicioHero from '@/components/ServicioHero';
 import { freightForwardingFeatures } from '@/data/services/freightForwarding.data';
 import { integralLogisticsFeatures } from '@/data/services/integralLogistics.data';
 import { loadingAndUnloadingFeatures } from '@/data/services/loadingAndUnloading.data';
+import { allServices } from '@/data/services/services';
 import { storageFeatures } from '@/data/services/storage.data';
 
 import React, { useRef } from 'react';
@@ -13,7 +15,6 @@ import {
 	FaWarehouse,
 	FaDolly,
 	FaProjectDiagram,
-	FaLock,
 } from 'react-icons/fa';
 
 const services = () => {
@@ -21,7 +22,12 @@ const services = () => {
 	const storageRef = useRef<HTMLDivElement>(null);
 	const loadingAndUnloadingRef = useRef<HTMLDivElement>(null);
 	const integralLogisticsRef = useRef<HTMLDivElement>(null);
-
+	const refsMap = {
+		freightForwardingRef,
+		storageRef,
+		loadingAndUnloadingRef,
+		integralLogisticsRef,
+	};
 	const handleScroll = (seccionRef: any) => {
 		seccionRef.current?.scrollIntoView({ behavior: 'smooth' });
 	};
@@ -40,43 +46,25 @@ const services = () => {
 
 				{/* MANTIENE LA ANIMACION DE CARGA DENTRO DEL COMPONENTE */}
 				<div className="grid md:grid-cols-3 items-center gap-8">
-					<ServiceCard
-						onClick={() => handleScroll(freightForwardingRef)}
-						icon={<FaTruckMoving size={40} className="text-sky-400" />}
-						title="Transporte de Carga"
-						description="Transporte en contenedores y carga suelta. Actualmente cubrimos rutas locales y regionales."
-					/>
-					<ServiceCard
-						onClick={() => handleScroll(storageRef)}
-						icon={<FaWarehouse size={40} className="text-sky-400" />}
-						title="Almacenamiento"
-						description="Servicio de almacenamiento en bodegas para todo tipo de mercancías."
-					/>
-					<ServiceCard
-						onClick={() => handleScroll(loadingAndUnloadingRef)}
-						icon={<FaDolly size={40} className="text-sky-400" />}
-						title="Cargue y Descargue"
-						description="Cargue y descargue de mercancías con máquinas especializadas."
-					/>
-					<ServiceCard
-						disabled={true}
-						icon={<FaLock size={40} className="text-gray-700" />}
-						title="PRONTO"
-						description=""
-					/>
-					<ServiceCard
-						onClick={() => handleScroll(integralLogisticsRef)}
-						icon={<FaProjectDiagram size={40} className="text-sky-400" />}
-						title="Logística"
-						description="Acompañamiento logístico, consolidación, desconsolidación, empaque, y vaciado de contenedores."
-					/>
-
-					<ServiceCard
-						disabled={true}
-						icon={<FaLock size={40} className="text-gray-700" />}
-						title="PRONTO"
-						description=""
-					/>
+					{allServices.map((service, index) => (
+						<FallingCard index={index} key={index} disabled={service.disabled}>
+							<ServiceCard
+								key={index}
+								disabled={service.disabled}
+								icon={service.icon}
+								title={service.title}
+								description={service.description}
+								onClick={
+									service.onClickRef
+										? () =>
+												handleScroll(
+													refsMap[service.onClickRef as keyof typeof refsMap]
+												)
+										: undefined
+								}
+							/>
+						</FallingCard>
+					))}
 				</div>
 
 				<FallingSection>

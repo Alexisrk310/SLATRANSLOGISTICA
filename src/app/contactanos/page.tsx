@@ -37,7 +37,7 @@ const ContactPage = () => {
 
 	return (
 		<div className="min-h-screen bg-gray-50 flex flex-col">
-			<section className="bg-sky-400 text-white py-20 px-6 flex flex-col items-center text-center">
+			<section className="bg-[#0ea5e9] text-white py-20 px-6 flex flex-col items-center text-center">
 				<FallingSection>
 					<h1 className="text-5xl font-bold mb-4">Contáctanos</h1>
 					<p className="text-xl max-w-2xl">
