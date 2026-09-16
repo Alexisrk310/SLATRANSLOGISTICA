@@ -2,7 +2,11 @@
 import FallingSection from '@/components/FallingSection';
 import FallingCard from '@/components/FallingCard';
 import React from 'react';
-import { companyInfo } from '@/data/company/companyInfo';
+import {
+	companyInfo,
+	companyValues,
+	companyValuesIntro,
+} from '@/data/company/companyInfo';
 
 const about = () => {
 	return (
@@ -24,15 +28,27 @@ const about = () => {
 				</FallingSection>
 			</section>
 
-			{/* Misión, visión, objetivo */}
+			{/* VISIÓN, MISIÓN Y VALORES */}
 			<section className="w-full max-w-6xl px-6 py-16">
+				<FallingSection>
+					<div className="text-center mb-12">
+						<h2 className="text-4xl font-extrabold text-sky-500 drop-shadow-md mb-4">
+							VISIÓN, MISIÓN Y VALORES
+						</h2>
+						<p className="text-lg font-semibold text-sky-700 leading-relaxed">
+							Enfoque en Servicios Logísticos, Transporte y Operación en Zona
+							Franca
+						</p>
+					</div>
+				</FallingSection>
+
 				{/* Bloques que no ocupan toda la fila */}
 				<div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 					{companyInfo
 						.filter((item) => !item.fullRow)
 						.map((item, index) => (
 							<FallingCard key={index} index={index}>
-								<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left">
+								<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left h-full">
 									<h2 className="text-2xl font-bold text-sky-600 mb-4">
 										{item.title}
 									</h2>
@@ -57,22 +73,38 @@ const about = () => {
 							</FallingCard>
 						))}
 				</div>
-			</section>
 
-			{/* Sección adicional */}
-			<FallingSection>
-				<section className="w-full py-16 px-6 text-center ">
-					<h2 className="text-4xl font-bold text-sky-600 mb-6">
-						Nuestros Valores
-					</h2>
-					<p className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
-						Nos guiamos por principios sólidos como la responsabilidad, la
-						transparencia y el compromiso con nuestros clientes. Cada entrega es
-						una promesa cumplida, y trabajamos cada día para fortalecer la
-						confianza que nuestros aliados comerciales depositan en nosotros.
-					</p>
+				{/* Nuestros Valores */}
+				<FallingSection>
+					<div className="text-center mt-20 mb-10">
+						<h2 className="text-4xl font-extrabold text-sky-500 drop-shadow-md mb-6">
+							Nuestros Valores
+						</h2>
+						<p className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
+							{companyValuesIntro}
+						</p>
+					</div>
+				</FallingSection>
+
+				{/* Tarjetas de valores */}
+				<div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+					{companyValues.map((value, index) => (
+						<FallingCard key={index} index={index}>
+							<div className="bg-white shadow-lg rounded-2xl p-6 animated-border-left h-full">
+								<h2 className="text-2xl font-bold text-sky-600 mb-4">
+									{value.title}
+								</h2>
+								<p className="text-gray-700 leading-relaxed mb-4">{value.text}</p>
+								<p className="text-sm font-semibold text-sky-700 uppercase tracking-wide mb-1">
+									¿Por qué es clave?
+								</p>
+								<p className="text-gray-600 leading-relaxed">{value.reason}</p>
+							</div>
+						</FallingCard>
+					))}
+				</div>
+
 				</section>
-			</FallingSection>
 		</div>
 	);
 };

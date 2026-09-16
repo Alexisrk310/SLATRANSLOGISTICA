@@ -47,13 +47,13 @@ const ContactPage = () => {
 				</FallingSection>
 				<div className="mt-8 flex flex-col md:flex-row gap-6">
 					<a
-						href="https://wa.me/+573245837514"
+						href="https://wa.me/+573185445210"
 						target="_blank"
 						className="flex items-center gap-2 bg-white text-sky-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition">
 						<FaWhatsapp /> WhatsApp
 					</a>
 					<a
-						href="tel:+573245837514"
+						href="tel:+573185445210"
 						className="flex items-center gap-2 border border-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-sky-300 transition">
 						<FaPhoneAlt /> Llamar
 					</a>

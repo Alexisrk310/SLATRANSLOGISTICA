@@ -36,7 +36,7 @@ const Navbar = () => {
 							</Link>
 						))}
 						<Link
-							href="https://wa.me/+573245837514"
+							href="https://wa.me/+573185445210"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="bg-white text-sky-500 px-5 py-2 rounded-xl font-semibold shadow hover:bg-sky-100 transition">
@@ -80,7 +80,7 @@ const Navbar = () => {
 						</Link>
 					))}
 					<Link
-						href="https://wa.me/+573245837514"
+						href="https://wa.me/+573185445210"
 						target="_blank"
 						rel="noopener noreferrer"
 						onClick={() => setMenuOpen(false)}

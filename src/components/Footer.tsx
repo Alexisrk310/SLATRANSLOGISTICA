@@ -39,7 +39,7 @@ export default function Footer() {
 						<ul className="space-y-2 text-sm">
 							<li className="flex items-center gap-2">
 								<FaPhoneAlt className="text-white text-base" />
-								+57 324 583 7514
+								+57 318 544 5210
 							</li>
 							<li className="flex items-center gap-2">
 								<FaEnvelope className="text-white text-base" />

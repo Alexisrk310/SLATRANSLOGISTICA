@@ -59,7 +59,7 @@ const ServicioHero: React.FC<ServicioHeroProps> = ({
 					))}
 
 					<a
-						href="https://api.whatsapp.com/send/?phone=+573245837514&text=¿Hola como estás?, me gustaría prestar tus servicios"
+						href="https://api.whatsapp.com/send/?phone=+573185445210&text=¿Hola como estás?, me gustaría prestar tus servicios"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-block mt-6 sm:mt-8 px-5 sm:px-6 py-3 bg-sky-500 text-white rounded-lg shadow-md hover:bg-sky-600 transition duration-300 text-sm sm:text-base">

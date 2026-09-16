@@ -9,4 +9,6 @@ export const alliedBrandData = [
 		src: '/brands/flexindustrial.jpeg',
 		alt: 'Logo flex industrial',
 	},
+	{ id: 'pro-logo', src: '/brands/pro-logo.jpg', alt: 'Logo Pro' },
+	{ id: 'flex-logo', src: '/brands/flex-logo.webp', alt: 'Logo Flex' },
 ];
