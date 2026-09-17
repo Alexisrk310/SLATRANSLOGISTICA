@@ -43,7 +43,7 @@ export default function Footer() {
 							</li>
 							<li className="flex items-center gap-2">
 								<FaEnvelope className="text-white text-base" />
-								operaciones@translogisticasla.com
+								diroperaciones@translogisticasla.com
 							</li>
 						</ul>
 					</div>
