@@ -4,19 +4,23 @@ import { FaArrowLeft } from 'react-icons/fa';
 
 export default function NotFound() {
 	return (
-		<div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-400 via-orange-50 to-sky-400 px-6 text-center">
-			<h1 className="text-9xl font-extrabold text-sky-600 ">404</h1>
-			<h2 className="text-2xl md:text-3xl font-bold mt-4 text-sky-600 ">
+		<div className="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden px-6 text-center">
+			<div className="absolute inset-0 -z-10 bg-gradient-to-b from-sky-50 via-white to-sky-50" />
+			<div className="absolute inset-0 -z-10 grid-pattern opacity-50 hero-fade-bottom" />
+			<div className="absolute inset-x-0 top-0 -z-10 h-[85%] radial-glow" />
+
+			<p className="font-display text-[9rem] sm:text-[12rem] leading-none font-black title-gradient drop-shadow-sm">
+				404
+			</p>
+			<h1 className="text-2xl md:text-3xl font-extrabold mt-2 text-sky-950">
 				Página no encontrada
-			</h2>
-			<p className="mt-2 max-w-md text-sky-600 ">
+			</h1>
+			<p className="mt-3 max-w-md text-slate-600">
 				La página que buscas no existe o fue movida. Verifica la URL o vuelve a
 				la página principal.
 			</p>
 
-			<Link
-				href="/"
-				className="mt-6 flex items-center gap-2 bg-white text-sky-600 px-5 py-3 rounded-full font-semibold shadow-lg hover:bg-sky-100 transition">
+			<Link href="/" className="btn-primary mt-8">
 				<FaArrowLeft /> Volver al inicio
 			</Link>
 		</div>

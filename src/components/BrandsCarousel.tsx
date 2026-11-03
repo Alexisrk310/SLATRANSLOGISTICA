@@ -40,26 +40,34 @@ const BrandsCarousel: React.FC<BrandsCarouselProps> = ({
 	const totalWidth = itemsToRender.length * 160; // ancho total estimado
 
 	return (
-		<div ref={containerRef} className="w-full overflow-hidden bg-white pt-8">
+		<div
+			ref={containerRef}
+			aria-hidden="true"
+			className="relative w-full overflow-hidden select-none pointer-events-none [mask-image:linear-gradient(90deg,transparent,#000_4%,#000_96%,transparent)]"
+			style={{ WebkitUserSelect: 'none', userSelect: 'none' }}>
 			{itemsToRender.length > 0 && (
 				<motion.div
-					className="flex gap-8 px-6"
+					className="flex items-center gap-10 py-2"
 					animate={{ x: [0, -totalWidth / 2] }}
 					transition={{
 						ease: 'linear',
-						duration: totalWidth / 2 / speed, // velocidad constante
+						duration: totalWidth / 2 / speed,
 						repeat: Infinity,
 					}}
 					style={{ whiteSpace: 'nowrap' }}>
 					{itemsToRender.map((brand, index) => (
-						<Image
-							width={160}
-							height={160}
+						<div
 							key={brand.id + '-' + index}
-							src={brand.src}
-							alt={brand.alt}
-							className="w-40 h-40 object-contain shrink-0"
-						/>
+							className="shrink-0 flex items-center justify-center h-28 w-40 rounded-2xl bg-white">
+							<Image
+								width={160}
+								height={160}
+								src={brand.src}
+								alt={brand.alt}
+								draggable={false}
+								className="max-h-20 w-auto object-contain opacity-80 grayscale pointer-events-none select-none"
+							/>
+						</div>
 					))}
 				</motion.div>
 			)}

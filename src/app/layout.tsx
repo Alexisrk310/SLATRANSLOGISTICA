@@ -4,6 +4,7 @@ import './globals.css';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 const geistSans = Geist({
 	variable: '--font-geist-sans',
 	subsets: ['latin'],
@@ -129,13 +130,15 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="es">
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<Navbar />
-				{children}
-				<WhatsAppWidget />
-				<Footer />
+				<SmoothScrollProvider>
+					<Navbar />
+					<main className="pt-20">{children}</main>
+					<WhatsAppWidget />
+					<Footer />
+				</SmoothScrollProvider>
 			</body>
 		</html>
 	);

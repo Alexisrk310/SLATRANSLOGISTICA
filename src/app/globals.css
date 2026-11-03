@@ -1,12 +1,342 @@
 @import 'tailwindcss';
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+/* ============================================================
+   TRANSLOGISTICA SLA — Sistema de diseño
+   Paleta derivada del logo (azules corporativos sky/cyan)
+   ============================================================ */
+
+:root {
+	/* Marca */
+	--brand-50: #eff9ff;
+	--brand-100: #def2ff;
+	--brand-200: #b6e8ff;
+	--brand-300: #75d6ff;
+	--brand-400: #38bdf8; /* azul principal del logo */
+	--brand-500: #0ea5e9;
+	--brand-600: #0284c7;
+	--brand-700: #036aa1;
+	--brand-800: #075985;
+	--brand-900: #0c3f61;
+	--brand-950: #082a44;
+
+	--accent-500: #06b6d4; /* cyan complementario */
+	--accent-600: #0891b2;
+
+	/* Superficies neutras */
+	--surface-0: #ffffff;
+	--surface-50: #f7fafc;
+	--surface-100: #eef3f8;
+	--surface-200: #e2eaf2;
+
+	--ink-900: #0b1a2b;
+	--ink-700: #22384f;
+	--ink-500: #4b647f;
+	--ink-400: #6e859c;
+	--ink-300: #9db1c6;
+
+	/* Radios y sombras */
+	--radius-xs: 6px;
+	--radius-sm: 10px;
+	--radius-md: 14px;
+	--radius-lg: 20px;
+	--radius-xl: 28px;
+	--radius-2xl: 36px;
+
+	--shadow-xs: 0 1px 2px rgba(12, 63, 97, 0.06);
+	--shadow-sm: 0 2px 6px rgba(12, 63, 97, 0.08);
+	--shadow-md: 0 10px 30px -12px rgba(12, 63, 97, 0.18);
+	--shadow-lg: 0 24px 60px -24px rgba(12, 63, 97, 0.28);
+	--shadow-glow: 0 20px 60px -24px rgba(14, 165, 233, 0.55);
+
+	/* Gradientes */
+	--gradient-brand: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 45%, #0369a1 100%);
+	--gradient-soft: linear-gradient(180deg, #ffffff 0%, #eff9ff 100%);
+	--gradient-dark: linear-gradient(135deg, #075985 0%, #0b2a44 100%);
+
+	/* Timings */
+	--ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
 }
-/* ANIMATION HORIZONTAL */
+
+html {
+	scroll-behavior: auto; /* Lenis gestiona el scroll */
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	background: var(--surface-50);
+	color: var(--ink-900);
+	font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* Reset de selección */
+::selection {
+	background: var(--brand-200);
+	color: var(--brand-900);
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background: var(--surface-100);
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, var(--brand-400), var(--brand-600));
+	border-radius: 10px;
+	border: 2px solid var(--surface-100);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, var(--brand-500), var(--brand-700));
+}
+
+/* ============================================================
+   Lenis
+   ============================================================ */
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+	pointer-events: none;
+}
+
+/* ============================================================
+   Tipografía utilitaria
+   ============================================================ */
+.font-display {
+	font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+	letter-spacing: -0.02em;
+}
+
+.text-balance {
+	text-wrap: balance;
+}
+
+/* ============================================================
+   Componentes utilitarios reutilizables
+   ============================================================ */
+@layer components {
+
+/* Chip / badge */
+.chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.4rem 0.9rem;
+	border-radius: 999px;
+	background: var(--brand-50);
+	color: var(--brand-700);
+	border: 1px solid rgba(14, 165, 233, 0.18);
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+.chip-dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 999px;
+	background: var(--brand-500);
+	box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+}
+
+/* Botones */
+.btn-primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.85rem 1.4rem;
+	border-radius: 999px;
+	color: #fff;
+	background: var(--gradient-brand);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	box-shadow: var(--shadow-md);
+	transition: transform 0.25s var(--ease-out-smooth),
+		box-shadow 0.25s var(--ease-out-smooth), filter 0.25s;
+	position: relative;
+	overflow: hidden;
+}
+.btn-primary::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		120deg,
+		transparent 0%,
+		rgba(255, 255, 255, 0.35) 50%,
+		transparent 100%
+	);
+	transform: translateX(-120%);
+	transition: transform 0.7s var(--ease-out-smooth);
+}
+.btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-glow);
+	filter: saturate(1.05);
+}
+.btn-primary:hover::after {
+	transform: translateX(120%);
+}
+.btn-primary:active {
+	transform: translateY(0);
+}
+
+.btn-ghost {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.8rem 1.3rem;
+	border-radius: 999px;
+	color: var(--brand-700);
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(14, 165, 233, 0.25);
+	backdrop-filter: blur(8px);
+	font-weight: 600;
+	transition: all 0.25s var(--ease-out-smooth);
+}
+.btn-ghost:hover {
+	background: #fff;
+	border-color: var(--brand-400);
+	color: var(--brand-800);
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-white {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.8rem 1.3rem;
+	border-radius: 999px;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(6px);
+	font-weight: 600;
+	transition: all 0.25s var(--ease-out-smooth);
+}
+.btn-outline-white:hover {
+	background: #fff;
+	color: var(--brand-700);
+	transform: translateY(-2px);
+}
+
+/* Tarjetas */
+.card-surface {
+	background: #fff;
+	border-radius: var(--radius-lg);
+	border: 1px solid rgba(14, 165, 233, 0.1);
+	box-shadow: var(--shadow-sm);
+	transition: transform 0.4s var(--ease-out-smooth),
+		box-shadow 0.4s var(--ease-out-smooth),
+		border-color 0.4s var(--ease-out-smooth);
+}
+.card-surface:hover {
+	transform: translateY(-6px);
+	border-color: rgba(14, 165, 233, 0.3);
+	box-shadow: var(--shadow-lg);
+}
+
+/* Decoración de títulos */
+.eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	color: var(--brand-600);
+	font-size: 0.78rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.eyebrow::before {
+	content: '';
+	width: 28px;
+	height: 2px;
+	background: var(--gradient-brand);
+	border-radius: 2px;
+}
+
+.title-gradient {
+	background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 55%, #38bdf8 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/* Patrón decorativo */
+.grid-pattern {
+	background-image:
+		linear-gradient(rgba(14, 165, 233, 0.07) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(14, 165, 233, 0.07) 1px, transparent 1px);
+	background-size: 48px 48px;
+	background-position: -1px -1px;
+}
+.radial-glow {
+	background: radial-gradient(
+		ellipse 90% 70% at 50% 0%,
+		rgba(56, 189, 248, 0.22),
+		transparent 70%
+	);
+}
+.hero-fade-bottom {
+	-webkit-mask-image: linear-gradient(
+		to bottom,
+		black 0%,
+		black 55%,
+		transparent 100%
+	);
+	mask-image: linear-gradient(
+		to bottom,
+		black 0%,
+		black 55%,
+		transparent 100%
+	);
+}
+
+/* Sección con separador diagonal sutil */
+.section-divider {
+	position: relative;
+}
+.section-divider::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(14, 165, 233, 0.3),
+		transparent
+	);
+}
+
+} /* end @layer components */
+
+/* ============================================================
+   Animaciones legacy (compatibilidad)
+   ============================================================ */
 @keyframes gradient-move {
 	0% {
 		background-position: 0% 50%;
@@ -20,13 +350,12 @@
 	position: relative;
 	overflow: hidden;
 }
-
 .animated-border-top::before {
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 10px;
+	height: 4px;
 	width: 100%;
 	background: linear-gradient(
 		270deg,
@@ -41,15 +370,13 @@
 		#0ea5e9,
 		#06b6d4
 	);
-
 	background-size: 400% 400%;
-	animation: gradient-move 3s linear infinite;
-	border-top-left-radius: 0.75rem;
-	border-top-right-radius: 0.75rem;
+	animation: gradient-move 6s linear infinite;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
 	z-index: 10;
 }
 
-/* ANIMATION VERTICAL */
 @keyframes gradient-move-vertical {
 	0% {
 		background-position: 50% 0%;
@@ -63,13 +390,12 @@
 	position: relative;
 	overflow: hidden;
 }
-
 .animated-border-left::before {
 	content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 10px;
+	width: 4px;
 	height: 100%;
 	background: linear-gradient(
 		180deg,
@@ -85,22 +411,20 @@
 		#06b6d4
 	);
 	background-size: 400% 400%;
-	animation: gradient-move-vertical 4s linear infinite;
-	border-top-left-radius: 0.75rem;
-	border-bottom-left-radius: 0.75rem;
+	animation: gradient-move-vertical 6s linear infinite;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
 	z-index: 10;
 }
-/* ANIMATION OBSERVER */
+
 .falling-container {
 	opacity: 0;
 	transform: translateY(30px);
 	will-change: opacity, transform;
 }
-
 .fall {
 	animation: fallDown 0.5s ease-out forwards;
 }
-
 @keyframes fallDown {
 	from {
 		opacity: 0;
@@ -109,5 +433,41 @@
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+/* GSAP reveal helpers */
+.reveal-up {
+	opacity: 0;
+	transform: translateY(32px);
+	will-change: opacity, transform;
+}
+.reveal-fade {
+	opacity: 0;
+	will-change: opacity;
+}
+.split-char {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(0.6em);
+	will-change: opacity, transform;
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+	.reveal-up,
+	.reveal-fade,
+	.split-char,
+	.falling-container {
+		opacity: 1 !important;
+		transform: none !important;
 	}
 }
